@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007319bf-28e3-43cc-8af5-7e8141446c7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/MetodyCviceni1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,12 +33,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="55" />
+          <entry key="java" value="315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="315" />
         </counts>
       </usages-collector>
     </session>
@@ -70,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/MetodyCviceni1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -79,11 +77,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="297">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +107,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_02d_1/DataTypes.java" />
         <option value="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/Methods.java" />
-        <option value="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" />
         <option value="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/MetodyCviceni1.java" />
+        <option value="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" />
       </list>
     </option>
   </component>
@@ -172,7 +174,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1632920408797" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1632921391492" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -192,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AssignmentOperator">
+  <component name="RunManager" selected="Application.MedodyProcvicovani2">
     <configuration name="AssignmentOperator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._08d_4.AssignmentOperator" />
       <module name="lessons" />
@@ -229,13 +231,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MedodyProcvicovani2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._29d_11.MedodyProcvicovani2" />
+      <module name="lessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.spsmb.a3i._09m._29d_11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.DataTypes" />
       <item itemvalue="Application.AssignmentOperator" />
+      <item itemvalue="Application.MedodyProcvicovani2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MedodyProcvicovani2" />
         <item itemvalue="Application.AssignmentOperator" />
         <item itemvalue="Application.DataTypes" />
       </list>
@@ -252,18 +269,18 @@
       <option name="presentableId" value="Default" />
       <updated>1632918087833</updated>
       <workItem from="1632918091123" duration="947000" />
-      <workItem from="1632920070627" duration="333000" />
+      <workItem from="1632920070627" duration="1306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1280000" />
+    <option name="totallyTimeSpent" value="2253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25341427" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25341427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -272,7 +289,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32888147" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1869783" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1869783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -311,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -329,6 +339,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
