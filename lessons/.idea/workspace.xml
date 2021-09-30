@@ -2,19 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007319bf-28e3-43cc-8af5-7e8141446c7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/Arrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_02d_1/DataTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_02d_1/DataTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_03d_2/DataTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_03d_2/DataTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/ArithmeticExpressions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/ArithmeticExpressions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/AssignmentOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/AssignmentOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/CharStuff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/CharStuff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/Constatnts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/Constatnts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/EnumType$Karty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/EnumType$Karty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/EnumType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/EnumType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/TypeCastOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_06d_3/TypeCastOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_08d_4/AssignmentOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_08d_4/AssignmentOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_08d_4/RelationalOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_08d_4/RelationalOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Prikad_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Prikad_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Priklad_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Priklad_02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Priklad_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/A_Priklad_03.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/BitOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/BitOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/OperatorPriority.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_09d_5/OperatorPriority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/A_Priklad_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/A_Priklad_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/BitwiseLogical.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/BitwiseLogical.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/FormattedInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/FormattedInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/FormattedOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/FormattedOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/RealFormattedOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/RealFormattedOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/StringCharOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_13d_6/StringCharOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_03.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_04.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_05.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Condition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Condition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/ForEach.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/ForEach.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Label.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Label.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Switch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Switch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/TernaryOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/TernaryOperator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_01.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_02.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_03.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_05.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_06.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_06.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_07.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_07.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/Arrays_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +141,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1632922156251" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
@@ -118,11 +151,11 @@
       <recent name="C:\Users\STEMBERK\Documents\git\lessons\src\cz\spsmb\a3i" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Arrays">
-    <configuration name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Arrays_">
+    <configuration name="Arrays_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._30d_12.Arrays" />
+      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._30d_12.Arrays_" />
       <module name="lessons" />
       <extension name="coverage">
         <pattern>
@@ -188,11 +221,11 @@
       <item itemvalue="Application.DataTypes" />
       <item itemvalue="Application.AssignmentOperator" />
       <item itemvalue="Application.MedodyProcvicovani2" />
-      <item itemvalue="Application.Arrays" />
+      <item itemvalue="Application.Arrays_" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Arrays" />
+        <item itemvalue="Application.Arrays_" />
         <item itemvalue="Application.MedodyProcvicovani2" />
         <item itemvalue="Application.AssignmentOperator" />
         <item itemvalue="Application.DataTypes" />
