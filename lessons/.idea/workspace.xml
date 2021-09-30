@@ -2,91 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007319bf-28e3-43cc-8af5-7e8141446c7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/Arrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_15d_7/A_Priklad_05.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Switch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/Switch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/TernaryOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_22d_8/TernaryOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_03.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_06.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lessons/cz/spsmb/a3i/_09m/_23d_9/A_Priklad_06.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1445659844">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="489" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="489" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_02d_1/DataTypes.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_08d_4/AssignmentOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/Methods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_27d_10/MetodyCviceni1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_29d_11/MedodyProcvicovani2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -120,6 +53,7 @@
     <option name="width" value="1378" />
     <option name="height" value="733" />
   </component>
+  <component name="ProjectId" id="1yqw26wFsLPMA5V0UQZE4lyHUoH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -167,30 +101,39 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1632922156251" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\STEMBERK\Documents\git\lessons\src\cz\spsmb\a3i" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.MedodyProcvicovani2">
+  <component name="RunManager" selected="Application.Arrays">
+    <configuration name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._30d_12.Arrays" />
+      <module name="lessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.spsmb.a3i._09m._30d_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AssignmentOperator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._08d_4.AssignmentOperator" />
       <module name="lessons" />
@@ -245,15 +188,18 @@
       <item itemvalue="Application.DataTypes" />
       <item itemvalue="Application.AssignmentOperator" />
       <item itemvalue="Application.MedodyProcvicovani2" />
+      <item itemvalue="Application.Arrays" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Arrays" />
         <item itemvalue="Application.MedodyProcvicovani2" />
         <item itemvalue="Application.AssignmentOperator" />
         <item itemvalue="Application.DataTypes" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -309,8 +255,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/cz/spsmb/a3i/Main.java" />
