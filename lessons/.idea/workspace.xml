@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007319bf-28e3-43cc-8af5-7e8141446c7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/PoleCviceni.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/PoleCviceni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_09m/_30d_12/PoleCviceni.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <recent name="C:\Users\STEMBERK\Documents\git\lessons\src\cz\spsmb\a3i" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Arrays_">
+  <component name="RunManager" selected="Application.PoleCviceni">
     <configuration name="Arrays_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -152,16 +152,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i.Main" />
-      <module name="lessons" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MedodyProcvicovani2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._29d_11.MedodyProcvicovani2" />
       <module name="lessons" />
@@ -175,15 +165,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PoleCviceni" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._30d_12.PoleCviceni" />
+      <module name="lessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.spsmb.a3i._09m._30d_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.DataTypes" />
       <item itemvalue="Application.AssignmentOperator" />
       <item itemvalue="Application.MedodyProcvicovani2" />
       <item itemvalue="Application.Arrays_" />
+      <item itemvalue="Application.PoleCviceni" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PoleCviceni" />
         <item itemvalue="Application.Arrays_" />
         <item itemvalue="Application.MedodyProcvicovani2" />
         <item itemvalue="Application.AssignmentOperator" />
