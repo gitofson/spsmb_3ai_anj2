@@ -1,0 +1,8 @@
+cd spsmb_3ai_anj2
+git fetch
+git pull
+git reset --hard HEAD
+
+FORK - kopie repozitare, do ktere muzeme posilat commity
+git clone https://
+kontrola - gir remote show origin
