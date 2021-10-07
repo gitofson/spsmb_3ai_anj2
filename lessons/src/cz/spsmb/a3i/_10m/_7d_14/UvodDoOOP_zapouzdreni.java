@@ -26,7 +26,9 @@ public class UvodDoOOP_zapouzdreni {
         System.out.format("b1.barva=%d, b.barva=%d%n",b1.getBarva(),
                 b.getBarva());
         //pomocí new vytvoříme instanci třídy Obdelník:
-        Obdelnik obd = new Obdelnik(3,5);
+        //Obdelnik obd = new Obdelnik(3,5);
+        Obdelnik obd = new Obdelnik();
+
         //obd.sirka = 3;
         //obd.vyska = 5;
         System.out.format("sirka obdelniku:%d, vyska obdelniku:%d,"+
