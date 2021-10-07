@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PoleCviceni2 {
+    private static int[] m1(int[] in){
+        in[0]++;
+        return in;
+    }
     public static void main(String[] args){
         //Napište program, který přečte celé číslo typu long a vypíše jeho jednotlivé číslice oddělené
         //dvěma mezerami

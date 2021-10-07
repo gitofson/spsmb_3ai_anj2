@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007319bf-28e3-43cc-8af5-7e8141446c7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_10m/_7d_14/Bod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_10m/_7d_14/Obdelnik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_10m/_7d_14/UvodDoOOP_zapouzdreni.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cz/spsmb/a3i/_10m/_4d_13/PoleCviceni2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cz/spsmb/a3i/_10m/_4d_13/PoleCviceni2.java" afterDir="false" />
     </list>
@@ -118,7 +121,7 @@
       <recent name="C:\Users\STEMBERK\Documents\git\lessons\src\cz\spsmb\a3i" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PoleCviceni2">
+  <component name="RunManager" selected="Application.UvodDoOOP_zapouzdreni">
     <configuration name="Arrays_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -127,19 +130,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cz.spsmb.a3i._09m._30d_12.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssignmentOperator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._09m._08d_4.AssignmentOperator" />
-      <module name="lessons" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cz.spsmb.a3i._09m._08d_4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,20 +176,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UvodDoOOP_zapouzdreni" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cz.spsmb.a3i._10m._7d_14.UvodDoOOP_zapouzdreni" />
+      <module name="lessons" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.spsmb.a3i._10m._7d_14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.AssignmentOperator" />
       <item itemvalue="Application.MedodyProcvicovani2" />
       <item itemvalue="Application.Arrays_" />
       <item itemvalue="Application.PoleCviceni" />
       <item itemvalue="Application.PoleCviceni2" />
+      <item itemvalue="Application.UvodDoOOP_zapouzdreni" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UvodDoOOP_zapouzdreni" />
         <item itemvalue="Application.PoleCviceni2" />
         <item itemvalue="Application.PoleCviceni" />
         <item itemvalue="Application.Arrays_" />
         <item itemvalue="Application.MedodyProcvicovani2" />
-        <item itemvalue="Application.AssignmentOperator" />
       </list>
     </recent_temporary>
   </component>
