@@ -12,7 +12,7 @@ package _10m._07d_13;
  * datová reprezentace stavu plus operace s datovým typem => zapouzdření
  * není žádoucí každý bod vytvážet s celým popisem zvlášť => instance třídy, resp. objekty
  * Objekt = datový prvek, který je vytvořen dle vzoru třídy = instance třídy
- **/
+ */
 public class IntroductionOOP {
 
     public static void main(String[] args) {

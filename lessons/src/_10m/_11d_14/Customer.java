@@ -1,5 +1,8 @@
 package _10m._11d_14;
 
+/**
+ * Ukončení práce s objekty (finalizer - opak konstruktoru
+ */
 // Ukončení práce s objekty (finalizer - opak konstruktoru)
 public class Customer {
     public static int nCustomers = 0;   // Proměnná třídy
@@ -13,6 +16,7 @@ public class Customer {
     }
 
     public Customer() {
+        Customer.nCustomers++;
         nCustomers++;
         this.spent = 0;
     }
@@ -35,10 +39,9 @@ public class Customer {
         System.out.format("B utratil: %d%n", b.spent);
         System.out.format("utratili: %d%n", a.spent + b.spent);
         a = null;
-        //nutné vynucení si zrušení objektu (instance třídy Customer)
-        //na takto krátkém programu nutné spustit debugování a nastavit breakpointy
-        System.runFinalization();//vynucení  si spuštění finalizérů
-        System.gc();//volání Garbage Collectoru
+        // Nutné vynucení si zrušení objektu (instance třídy Customer)
+        System.runFinalization();   // Vynucení si spuštění finalizéru
+        System.gc();                // Volání Garbage Collectoru
         System.out.format("Počet zákazníků: %d%n", Customer.nCustomers);
     }
 }

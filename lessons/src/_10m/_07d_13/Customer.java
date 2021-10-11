@@ -1,6 +1,8 @@
 package _10m._07d_13;
 
-// Použití proměnné třídy (statické proměnné) v objektech
+/**
+ * Použití proměnné třídy (statické proměnné) v objektech
+ */
 public class Customer {
     public static int nCustomers = 0;   // Proměnná třídy
     public int spent;
