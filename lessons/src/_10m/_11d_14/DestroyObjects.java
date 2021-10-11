@@ -1,0 +1,16 @@
+package _10m._11d_14;
+
+/**
+ * Rušení objektů
+ */
+public class DestroyObjects {
+
+    public static void main(String[] args) {
+//        InstanceMethods im = new Instancemethods();
+//        im.setX(4);
+//        System.out.println(im.getX());
+//        // Zrušení objektu (instance třídy InstanceMethods) im:
+//        im = null;
+//        System.out.println(im.getX()); // objekt zrušen, výjimka se vyhodí
+    }
+}
