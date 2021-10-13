@@ -27,6 +27,9 @@ public class Triangle {
             this.sideC = 0;
         }
     }
+    public Triangle(int jednaStrana, int druhaStrana){
+        this(jednaStrana,  jednaStrana, druhaStrana);
+    }
 
     public double getSideA() {
         return this.sideA;

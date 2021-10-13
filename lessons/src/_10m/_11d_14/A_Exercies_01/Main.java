@@ -6,8 +6,14 @@ public class Main {
     kdy zadávané strany netvoří trojúhelník (tj. součet dvou stran je menší,
     než třetí strana). V tomto případě konstruktor nastaví všechny strany na nulu
      */
+    /*
+    * přetěžte konstruktor Triangle(int jednaStrana), který bude vytvářet rovnostranné trojúhelníky
+    * */
+    /*
+    * Přetěžte konstruktor Triangle(int jednaStrana, int druhaStrana), který bude vytvářet rovnoramenné trojúhelníky
+    * */
     public static void main(String[] args) {
-        Triangle abc = new Triangle(3, 4, 10);
+        Triangle abc = new Triangle(3, 4);
         System.out.println(abc.circumference());
         System.out.println(abc.isRightAngle());
         System.out.println(abc.isTriangle());
