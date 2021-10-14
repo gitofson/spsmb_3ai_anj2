@@ -3,28 +3,28 @@ package _10m._14d_15;
 //importuj všechny třídy balíčku awt
 import java.awt.*;
 
-public class OkenkoGUI {
-    Button ahojBT;
+public class WindowGUI {
+    Button helloBT;
     Label lab;
 
-    OkenkoGUI(Frame ramecek){
+    WindowGUI(Frame myFrame){
         //vytvoření anonymní instance třídy FlowLayout a její přidání
         //do ramecku (instance třídy Frame)
-        ramecek.setLayout(new FlowLayout());
+        myFrame.setLayout(new FlowLayout());
         //nová  instance třídy Button
-        this.ahojBT = new Button("Ahoj");
+        this.helloBT = new Button("Ahoj");
         //nová instance třídy Label (Návěští)
         this.lab = new Label("Nazdar");
         //přidání tlačítka do rámečku
-        ramecek.add(this.ahojBT);
+        myFrame.add(this.helloBT);
         //přidání návěští do rámečku
-        ramecek.add(this.lab);
-        ramecek.setSize(170,65);
+        myFrame.add(this.lab);
+        myFrame.setSize(170,65);
     }
-    public static void main(String[] args) {
-        Frame ramec = new Frame("Muj Ramec");
-        OkenkoGUI o = new OkenkoGUI(ramec);
-        ramec.setVisible(true);
 
+    public static void main(String[] args) {
+        Frame myFrame = new Frame("Muj Ramec");
+        WindowGUI window = new WindowGUI(myFrame);
+        myFrame.setVisible(true);
     }
 }
