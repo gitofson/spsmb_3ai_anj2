@@ -1,21 +1,31 @@
 package _10m._14d_15;
 
+
 import java.awt.*;
-public class OkenkoGUI{
-    Button helloBT;
+
+public class OkenkoGUI {
+    Button ahojBT;
     Label lab;
 
-    OkenkoGUI(Frame frame) {
-        frame.setLayout(new FlowLayout());
-        this.helloBT = new Button("Hello");
-        this.lab = new Label ("Nazdar");
-        frame.add(this.helloBT);
-        frame.add(this.lab);
-        frame.setSize(170, 100);
+    OkenkoGUI(Frame ramecek){
+        //vytvoření anonymní instance třídy FlowLayout a její přidání
+        //do ramecku (instance třídy Frame)
+        ramecek.setLayout(new FlowLayout());
+        //nová  instance třídy Button
+        this.ahojBT = new Button("Ahoj");
+        //nová instance třídy Label (Návěští)
+        this.lab = new Label("Nazdar");
+        //přidání tlačítka do rámečku
+        ramecek.add(this.ahojBT);
+        //přidání návěští do rámečku
+        ramecek.add(this.lab);
+        ramecek.setSize(170,65);
     }
-    public static void main(String[] args){
-        Frame bruh = new Frame("THIS");
-        OkenkoGUI okenko = new OkenkoGUI(bruh);
-        bruh.setVisible(true);
+    public static void main(String[] args) {
+        Frame ramec = new Frame("Muj Ramec");
+        OkenkoGUI o = new OkenkoGUI(ramec);
+        ramec.setVisible(true);
+
     }
 }
+
