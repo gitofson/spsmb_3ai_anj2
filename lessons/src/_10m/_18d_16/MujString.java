@@ -19,12 +19,14 @@ public class MujString extends Object {
         return (jmenoTridy + ": " + hodnota);
     }
     public void puvodniToString() {
-        //pomocí super zavoláme metodu předka
+        //pomocí super zavoláme metodu předka - budeme brát v dědičnosti objektů
         System.out.println(super.toString());
     }
     public static void main(String[] args) {
         MujString s1 = new MujString(5);
         s1.puvodniToString();
+        //oba příkazy dělají totěž:
         System.out.println(s1.toString());
+        System.out.println(s1);
     }
 }
