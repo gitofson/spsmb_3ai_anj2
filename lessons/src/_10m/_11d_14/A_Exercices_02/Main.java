@@ -17,7 +17,5 @@ public class Main {
         PravouhlyTrojuhelnik rov = new PravouhlyTrojuhelnik(1);
         System.out.println("prepona pravouhleho rovnoramenneho  " + rov.delkaPrepony());
         System.out.println("obsah pravouhleho rovnoramenneho " + rov.obsah());
-
-
     }
 }
