@@ -3,9 +3,12 @@ package _10m._21d_17;
 public class DomaciUkol {
 /***
  * Každý sem napište metodu třídy dle zadání
-    Fiala
-    public static int obsahObdelnika(int stranaA, int stranaB)
+ */
+    public static int obsahObdelnika(int stranaA, int stranaB){
+ return stranaA * stranaB;
+ }
 
+/**
     Hoffman
     public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
 
