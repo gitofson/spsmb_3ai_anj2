@@ -16,5 +16,6 @@ public class GeneratorSlov {
         palindrom.append(halfPalindrom);
         palindrom.append(halfPalindrom.reverse().deleteCharAt(0));
         System.out.println(palindrom);
+
     }
 }
