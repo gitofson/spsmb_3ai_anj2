@@ -21,6 +21,7 @@ public class DomaciUkol {
     Novák A.
     public static double obvodKruhu(double polomer)
 
+
     Novák Š.
     public static int povrchKrychle(int hranaA)
 
