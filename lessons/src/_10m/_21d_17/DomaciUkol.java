@@ -1,5 +1,7 @@
 package _10m._21d_17;
 
+import java.util.Scanner;
+
 public class DomaciUkol {
 /***
  * Každý sem napište metodu třídy dle zadání
@@ -31,7 +33,9 @@ public class DomaciUkol {
     public static int objemKrychle(int hranaA)
 
     Pelikán
-    může si vybrat svou úlohu
+    může si vybrat svou úlohu*/
+
+/**
 
     Rosenbaum
     public static long faktorial(byte n)
@@ -43,4 +47,7 @@ public class DomaciUkol {
     Vítek
     public static double povrchKoule(double polomer)
  ***/
+public static void main(String[] args) {
+
+}
 }
