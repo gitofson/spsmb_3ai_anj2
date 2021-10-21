@@ -1,13 +1,15 @@
 package _10m._14d_15;
-
 //importuj všechny třídy balíčku awt
+
 import java.awt.*;
+import java.awt.event.*;
+
 
 public class WindowGUI {
     Button helloBT;
     Label lab;
 
-    WindowGUI(Frame myFrame){
+    WindowGUI(Frame myFrame) {
         //vytvoření anonymní instance třídy FlowLayout a její přidání
         //do ramecku (instance třídy Frame)
         myFrame.setLayout(new FlowLayout());
@@ -19,7 +21,7 @@ public class WindowGUI {
         myFrame.add(this.helloBT);
         //přidání návěští do rámečku
         myFrame.add(this.lab);
-        myFrame.setSize(170,65);
+        myFrame.setSize(170, 65);
     }
 
     public static void main(String[] args) {
