@@ -38,8 +38,12 @@ public class DomaciUkol {
     public static long faktorial(byte n)
 
     Škrabánek
-    Výpočet fibbonaciho posloupnosti
-    private static int fibonacci(int n)
+    Výpočet fibbonaciho posloupnosti*/
+    private static int fibonacci(int n){
+    if (n <=1) return n;
+    else return fibonacci(n-2)+fibonacci(n-1);
+    }/**
+
 
     Vítek
     public static double povrchKoule(double polomer)
