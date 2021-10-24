@@ -16,6 +16,9 @@ public class DomaciUkol {
 
     Hudeček
     public static int obvodPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
+    
+    Jiránek
+    public static double objemKoule(double polomer)
 
     Kolář
     public static double obsahKruhu(double polomer)
