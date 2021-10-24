@@ -24,8 +24,11 @@ public class DomaciUkol {
     public static double obvodKruhu(double polomer)
 
     Novák Š.
-    public static int povrchKrychle(int hranaA)
-
+    public static int povrchKrychle(int hranaA)*/
+public static int povrchkrychle(int a){
+ return 6 * a *a;
+}
+/**
     Odstrčil
     public static int objemKrychle(int hranaA)
 
@@ -48,7 +51,11 @@ public class DomaciUkol {
     Vítek
     public static double povrchKoule(double polomer)
  ***/
+<<<<<<< HEAD
 public static void main(String[] args) {
 
 }
+=======
+
+>>>>>>> 81f0b727e19dfec3fae5acc505b1d6b28b96c403
 }
