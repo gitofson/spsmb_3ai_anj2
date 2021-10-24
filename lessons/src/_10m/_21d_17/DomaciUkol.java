@@ -15,8 +15,15 @@ public class DomaciUkol {
     public static int obvodObdelnika(int stranaA, int stranaB)
 
     Hudeček
-    public static int obvodPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
+ */
+    public static int obvodPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB){
+        int prepona = (odvesnaA *odvesnaA)+(odvesnaB * odvesnaB);
+        double obvod = Math.sqrt(prepona) + odvesnaA + odvesnaB;
+        int obvodInt = (int) Math.round(obvod);
+        return obvodInt;
 
+    }
+/**
     Kolář
     public static double obsahKruhu(double polomer)
 
