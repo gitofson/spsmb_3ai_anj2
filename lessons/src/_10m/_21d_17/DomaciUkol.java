@@ -69,7 +69,7 @@ public class DomaciUkol {
         }
         return result;
     }
-    private static long faktorialRekurzivne(long n){
+    public static long faktorialRekurzivne(long n){
         if (n<=1){
             return 1;
         }else {
