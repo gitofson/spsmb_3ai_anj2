@@ -28,10 +28,14 @@ public class DomaciUkol {
         return obvodInt;
 
     }
-/*
-    Jiránek
-    public static double objemKoule(double polomer)
 
+    //Jiránek
+    public static double objemKoule(double polomer){
+        return(4/3 * 3.14 * (polomer*polomer*polomer));
+    }
+
+
+/*
     Kolář
     public static double obsahKruhu(double polomer)
 
