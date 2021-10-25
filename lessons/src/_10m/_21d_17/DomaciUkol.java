@@ -33,8 +33,11 @@ public class DomaciUkol {
     public static double objemKoule(double polomer)
 
     Kolář
-    public static double obsahKruhu(double polomer)
-
+    public static double obsahKruhu(double polomer)*/
+  public static double obsahKruhu(double polomer) {
+      return (Math.PI*Math.pow(polomer,2));
+  }
+/*
     Novák A.
     public static double obvodKruhu(double polomer)
 
