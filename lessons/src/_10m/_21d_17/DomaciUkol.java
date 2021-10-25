@@ -86,5 +86,8 @@ public class DomaciUkol {
     Vítek
     public static double povrchKoule(double polomer)
  ***/
+    public static double povrchKoule(double pU) {
+        return (4.00*Math.PI)*Math.pow(pU,2);
+    }
 
 }
