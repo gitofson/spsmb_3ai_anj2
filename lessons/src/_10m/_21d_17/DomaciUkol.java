@@ -33,8 +33,6 @@ public class DomaciUkol {
     public static double objemKoule(double polomer){
         return(4/3 * 3.14 * (polomer*polomer*polomer));
     }
-
-
 /*
     Kolář
     public static double obsahKruhu(double polomer)*/
@@ -44,8 +42,12 @@ public class DomaciUkol {
 /*
     Novák A.
     public static double obvodKruhu(double polomer)
-
-    OK Novák Š.
+*/
+    public static double obvodKruhu(double polomer){
+        double pi = 3.1415926536;
+        return 2 * pi * polomer;
+    }
+ /*   OK Novák Š.
     public static int povrchKrychle(int hranaA)*/
     public static int povrchkrychle(int a){
      return 6 * a *a;
