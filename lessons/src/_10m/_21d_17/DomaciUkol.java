@@ -7,8 +7,8 @@ public class DomaciUkol {
  * Každý sem napište metodu třídy dle zadání
  */
     public static int obsahObdelnika(int stranaA, int stranaB){
- return stranaA * stranaB;
- }
+        return stranaA * stranaB;
+    }
 
 /**
     Hoffman
@@ -17,8 +17,17 @@ public class DomaciUkol {
     Hojný
     public static int obvodObdelnika(int stranaA, int stranaB)
 
-    Hudeček
+    OK Hudeček
     public static int obvodPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
+ */
+    public static int obvodPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB){
+        int prepona = (odvesnaA *odvesnaA)+(odvesnaB * odvesnaB);
+        double obvod = Math.sqrt(prepona) + odvesnaA + odvesnaB;
+        int obvodInt = (int) Math.round(obvod);
+        return obvodInt;
+
+    }
+/*
     
     Jiránek
     public static double objemKoule(double polomer)
@@ -29,39 +38,55 @@ public class DomaciUkol {
     Novák A.
     public static double obvodKruhu(double polomer)
 
-    Novák Š.
+    OK Novák Š.
     public static int povrchKrychle(int hranaA)*/
-public static int povrchkrychle(int a){
- return 6 * a *a;
-}
+    public static int povrchkrychle(int a){
+     return 6 * a *a;
+    }
 /**
-    Odstrčil
+    OK Odstrčil
     public static int objemKrychle(int hranaA)
-
-    Pelikán
+ */
+     public static int objemKrychle(int hranaA){
+        return hranaA*hranaA*hranaA;
+     }
+/*
+    OK Pelikán
     může si vybrat svou úlohu*/
+    public static void printBoard(int sizeX, int sizeY) {
+        for (int i = 0; i < sizeY; i++) {
+            for (int j = 0; j < sizeX; j++) {
+                System.out.format("%s", j % 2 == 0 ? "██" : "  ");
+            }
+            System.out.print(i % 2 == 0 ? "\n  " : "\n");
+        }
+    }
 
 /**
 
-    Rosenbaum
+    OK Rosenbaum
     public static long faktorial(byte n)
-
-    Škrabánek
+*/
+    public static long faktorial(byte n) {
+        //if (n == 0) return 1; zbytečné
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+    /*
+    OK Škrabánek
     Výpočet fibbonaciho posloupnosti*/
     private static int fibonacci(int n){
-    if (n <=1) return n;
-    else return fibonacci(n-2)+fibonacci(n-1);
-    }/**
+        if (n <=1) return n;
+        else return fibonacci(n-2)+fibonacci(n-1);
+    }
+    /**
 
 
     Vítek
     public static double povrchKoule(double polomer)
  ***/
-<<<<<<< HEAD
-public static void main(String[] args) {
 
-}
-=======
-
->>>>>>> 81f0b727e19dfec3fae5acc505b1d6b28b96c403
 }
