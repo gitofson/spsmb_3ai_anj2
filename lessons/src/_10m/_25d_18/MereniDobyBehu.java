@@ -22,9 +22,9 @@ public class MereniDobyBehu {
             //první časový okamžik do z
             //z = System.currentTimeMillis();
             z =  System.nanoTime();
-            for (int j = 0; j < 500000; j++) {
+            //for (int j = 0; j < 500000; j++) {
                 f = DomaciUkol.faktorialRekurzivne(i);
-            }
+            //}
             System.out.format("=%d\t",f);
             //druhý časový okamžik dám do k
             //k = System.currentTimeMillis();
