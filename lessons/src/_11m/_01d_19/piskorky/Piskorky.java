@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class Piskorky {
     private final String VERSION = "1.0";
@@ -23,6 +24,8 @@ public class Piskorky {
     private JLabel labelKdoTahne2;
     private JButton[][] herniPlochaTlacitek;
 
+    private byte[][] herniPlochaHracu;
+
     private JFrame ramecekHlavni;
 
     //private BorderLayout bl = new BorderLayout(1,1);
@@ -36,7 +39,13 @@ public class Piskorky {
                 this.rozmerHraciPlochy+1, this.rozmerHraciPlochy+1));
         this.labelKdoTahne = new JLabel("Na tahu je ");
         this.labelKdoTahne2 = new JLabel(Hraci.values()[this.aktivniHrac].toString() );
-        herniPlochaTlacitek = new JButton[this.rozmerHraciPlochy+1][this.rozmerHraciPlochy+1];
+        this.herniPlochaTlacitek = new JButton[this.rozmerHraciPlochy+1][this.rozmerHraciPlochy+1];
+        //pole se zápornou hodnotou budou ta nevyužitá
+        this.herniPlochaHracu = new byte[this.rozmerHraciPlochy+1][this.rozmerHraciPlochy+1];
+        for (int i = 0; i < this.herniPlochaHracu.length ; i++) {
+            Arrays.fill(this.herniPlochaHracu[i], (byte) -1);
+        }
+
         this.inicializaceGUI();
     }
     private void inicializaceGUI(){
@@ -92,11 +101,25 @@ public class Piskorky {
         }
     }
     public void tlacitkoStisknuto(ActionEvent e){
-        ((JButton)e.getSource()).setText(Hraci.values()[this.aktivniHrac].toString().substring(0,1));
+        JButton stisknuteTlacitko = ((JButton)e.getSource());
+        stisknuteTlacitko.setText(Hraci.values()[this.aktivniHrac].toString().substring(0,1));
+        //nalezení souřadnic tlačítka a nastavení hráče do pole hráčů;
+        for (int i = 0; i < this.rozmerHraciPlochy + 1; i++) {
+            for (int j = 0; j < this.rozmerHraciPlochy + 1; j++) {
+                if(this.herniPlochaTlacitek[i][j] == stisknuteTlacitko){
+                    this.herniPlochaHracu[i][j] = this.aktivniHrac;
+                }
+            }
+        }
+        //přepnutí hráče
         if(++this.aktivniHrac >= Hraci.values().length){
             this.aktivniHrac = 0;
         }
+        //aktualizace panelu kdo táhne
         this.labelKdoTahne2.setText(Hraci.values()[this.aktivniHrac].toString());
+        for (int i = 0; i < this.herniPlochaHracu.length; i++) {
+            System.out.println(Arrays.toString(this.herniPlochaHracu[i]));
+        }
     }
 
     public static void main(String[] args) {
