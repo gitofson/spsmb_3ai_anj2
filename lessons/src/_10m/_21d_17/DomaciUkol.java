@@ -12,10 +12,14 @@ public class DomaciUkol {
         return stranaA * stranaB;
     }
 
-/**
-    Hoffman
-    public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
 
+    //Hofman
+    //public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
+    public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB){
+        return (odvesnaA*odvesnaB)/2;
+
+    }
+/*
     Hojný
     public static int obvodObdelnika(int stranaA, int stranaB)
 */
