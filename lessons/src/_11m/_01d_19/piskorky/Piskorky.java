@@ -124,6 +124,6 @@ public class Piskorky {
     }
 
     public static void main(String[] args) {
-        Piskorky p = new Piskorky(10);
+        Piskorky p = new Piskorky(19);
     }
 }
