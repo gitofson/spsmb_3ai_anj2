@@ -117,6 +117,7 @@ public class Piskorky {
         }
         //aktualizace panelu kdo táhne
         this.labelKdoTahne2.setText(Hraci.values()[this.aktivniHrac].toString());
+        System.out.println();
         for (int i = 0; i < this.herniPlochaHracu.length; i++) {
             System.out.println(Arrays.toString(this.herniPlochaHracu[i]));
         }
