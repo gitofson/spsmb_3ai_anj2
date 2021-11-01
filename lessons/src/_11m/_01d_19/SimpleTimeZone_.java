@@ -27,6 +27,7 @@ public class SimpleTimeZone_ {
                 3600000 //prodloužení o 1 hodinu (v ms)
         );
         boolean zmena = true;
+        //GregorianCalendar gc = new GregorianCalendar();
         GregorianCalendar gc = new GregorianCalendar(stz);
         gc.set(2021,1,1);
         /*
@@ -46,7 +47,7 @@ public class SimpleTimeZone_ {
                 System.out.format("%n%s ",new SimpleDateFormat("dd.MM.YYYY").format(gc.getTime()));
                 lastDay = gc.get(Calendar.DAY_OF_YEAR);
             }
-            System.out.format("%02d%c ",gc.get(Calendar.HOUR_OF_DAY), stz.inDaylightTime(gc.getTime())?'L':'Z');
+            System.out.format("%02d%c ",gc.get(Calendar.HOUR_OF_DAY), gc.getTimeZone().inDaylightTime(gc.getTime())?'L':'Z');
             gc.add(Calendar.HOUR_OF_DAY,1);
         }
     }
