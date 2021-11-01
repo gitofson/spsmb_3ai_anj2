@@ -12,10 +12,14 @@ public class DomaciUkol {
         return stranaA * stranaB;
     }
 
-/**
-    Hoffman
-    public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
 
+    //Hofman
+    //public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB)
+    public static int obsahPravouhlehoTrojuhelnika(int odvesnaA, int odvesnaB){
+        return (odvesnaA*odvesnaB)/2;
+
+    }
+/*
     Hojný
     public static int obvodObdelnika(int stranaA, int stranaB)
 */
@@ -28,17 +32,26 @@ public class DomaciUkol {
         return obvodInt;
 
     }
+
+    //Jiránek
+    public static double objemKoule(double polomer){
+        return(4/3 * 3.14 * (polomer*polomer*polomer));
+    }
 /*
-    Jiránek
-    public static double objemKoule(double polomer)
-
     Kolář
-    public static double obsahKruhu(double polomer)
-
+    public static double obsahKruhu(double polomer)*/
+  public static double obsahKruhu(double polomer) {
+      return (Math.PI*Math.pow(polomer,2));
+  }
+/*
     Novák A.
     public static double obvodKruhu(double polomer)
-
-    OK Novák Š.
+*/
+    public static double obvodKruhu(double polomer){
+        double pi = 3.1415926536;
+        return 2 * pi * polomer;
+    }
+ /*   OK Novák Š.
     public static int povrchKrychle(int hranaA)*/
     public static int povrchkrychle(int a){
      return 6 * a *a;
@@ -86,5 +99,8 @@ public class DomaciUkol {
     Vítek
     public static double povrchKoule(double polomer)
  ***/
+    public static double povrchKoule(double pU) {
+        return (4.00*Math.PI)*Math.pow(pU,2);
+    }
 
 }

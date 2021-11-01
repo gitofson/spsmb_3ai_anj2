@@ -9,5 +9,8 @@ public class Date_ {
     public static void main(String[] args) {
         Date d1 = new Date ();
         Date d2 = new Date (System.currentTimeMillis()+2000);
+        System.out.format("d1 = %s%n", d1);
+        System.out.format("d2 = %s%n", d2);
+        System.out.format("d1 v poctu ms od 1.1.1970:%d%n", d1.getTime());
     }
 }
