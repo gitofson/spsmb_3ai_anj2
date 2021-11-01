@@ -27,7 +27,9 @@ public class SimpleTimeZone_ {
                 3600000 //prodloužení o 1 hodinu (v ms)
         );
         boolean zmena = true;
-        GregorianCalendar gc = new GregorianCalendar(2021, Calendar.JANUARY, 1);
+        GregorianCalendar gc = new GregorianCalendar(stz);
+        gc.set(2021,1,1);
+        /*
         for (int i = 0; i < 366 ; i++) {
             System.out.format("%s ",new SimpleDateFormat("dd.MM.YYYY").format(gc.getTime()));
             for (int j = 0; j < 24; j++) {
@@ -35,6 +37,17 @@ public class SimpleTimeZone_ {
                 gc.add(Calendar.HOUR_OF_DAY,1);
             }
             System.out.println();
+        }
+         */
+        //OPRAVENA CHYBA, kalendář musí být inicializován se správnou časovou zónou Teď je to ono :)
+        int lastDay = 0;
+        while(gc.get(Calendar.YEAR) < 2022){
+            if(lastDay < gc.get(Calendar.DAY_OF_YEAR)){
+                System.out.format("%n%s ",new SimpleDateFormat("dd.MM.YYYY").format(gc.getTime()));
+                lastDay = gc.get(Calendar.DAY_OF_YEAR);
+            }
+            System.out.format("%02d%c ",gc.get(Calendar.HOUR_OF_DAY), stz.inDaylightTime(gc.getTime())?'L':'Z');
+            gc.add(Calendar.HOUR_OF_DAY,1);
         }
     }
 }

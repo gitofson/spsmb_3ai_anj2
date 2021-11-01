@@ -32,13 +32,13 @@ public class GregorianCalendar_ {
                 gc.getMinimum(Calendar.DAY_OF_YEAR),
                 gc.getMaximum(Calendar.DAY_OF_YEAR)
         );
-        //Akrtuální minimální / maximální hodnoty
+        //Akruální minimální / maximální hodnoty
         System.out.format(" abs min aktuálního měsíce: %d, abs max aktuálního měsíce: %d%n",
                 gc.getActualMinimum(Calendar.DAY_OF_YEAR),
                 gc.getActualMaximum(Calendar.DAY_OF_YEAR)
         );
         //FORMÁTOVÁNÍ
-        //DD - dnyv roce (Calendar.DAY_OF_YEAR)
+        //DD - dny v roce (Calendar.DAY_OF_YEAR)
         //G - ERA "n.l." "před n.l."
         //E - DAY_OF_WEEK
         //a - AM_PM "dop.", "odp."
