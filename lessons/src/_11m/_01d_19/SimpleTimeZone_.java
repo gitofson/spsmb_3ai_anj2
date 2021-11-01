@@ -1,5 +1,6 @@
 package _11m._01d_19;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.SimpleTimeZone;
@@ -28,7 +29,7 @@ public class SimpleTimeZone_ {
         boolean zmena = true;
         GregorianCalendar gc = new GregorianCalendar(2021, Calendar.JANUARY, 1);
         for (int i = 0; i < 366 ; i++) {
-            System.out.format("%d ",i);
+            System.out.format("%s ",new SimpleDateFormat("dd.MM.YYYY").format(gc.getTime()));
             for (int j = 0; j < 24; j++) {
                 System.out.format("%d %b ",j, stz.inDaylightTime(gc.getTime()));
                 gc.add(Calendar.HOUR_OF_DAY,1);
