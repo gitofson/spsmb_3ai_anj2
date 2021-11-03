@@ -1,5 +1,6 @@
 package _11m._03d_20.unit_testy;
 
+import _10m._21d_17.DomaciUkol;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,10 +14,12 @@ public class DomaciUkolTest {
 
     @Test
     public void obsahPravouhlehoTrojuhelnika() {
+        assertEquals(2, DomaciUkol.obsahPravouhlehoTrojuhelnika(2,2));
     }
 
     @Test
-    public void obvodPravouhlehoTrojuhelnika() { assertEquals(7,DomaciUkol.obvodPravouhlehoTrojuhelnika(2,2));
+    public void obvodPravouhlehoTrojuhelnika() {
+        assertEquals(7,DomaciUkol.obvodPravouhlehoTrojuhelnika(2,2));
     }
 
 
@@ -40,6 +43,8 @@ public class DomaciUkolTest {
 
     @Test
     public void objemKrychle() {
+        int objem = DomaciUkol.objemKrychle( 5);
+        assertEquals(125, objem);
     }
 
     @Test
