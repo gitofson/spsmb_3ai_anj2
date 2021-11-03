@@ -53,5 +53,7 @@ public class DomaciUkolTest {
 
     @Test
     public void povrchKoule() {
+        double x = DomaciUkol.povrchKoule(1);
+        assertTrue(12.55 <= x && x <= 12.57);
     }
 }
