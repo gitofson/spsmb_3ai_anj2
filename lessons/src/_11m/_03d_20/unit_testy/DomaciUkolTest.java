@@ -45,6 +45,8 @@ public class DomaciUkolTest {
 
     @Test
     public void faktorial() {
+        long l=DomaciUkol.faktorial((byte) 3);
+        assertEquals(6, l);
     }
 
     @Test
