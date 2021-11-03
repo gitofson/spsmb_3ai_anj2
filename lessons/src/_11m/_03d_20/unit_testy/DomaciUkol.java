@@ -1,5 +1,6 @@
 package _11m._03d_20.unit_testy;
 
+
 public class DomaciUkol {
 /***
  * Každý sem napište metodu třídy dle zadání
@@ -32,9 +33,9 @@ public class DomaciUkol {
     }
 
     //Jiránek
-    public static double objemKoule(double polomer){
-        return(4/3 * 3.14 * (polomer*polomer*polomer));
-    }
+
+
+
 /*
     Kolář
     public static double obsahKruhu(double polomer)*/
