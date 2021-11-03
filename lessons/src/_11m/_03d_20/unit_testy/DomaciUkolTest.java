@@ -16,8 +16,9 @@ public class DomaciUkolTest {
     }
 
     @Test
-    public void obvodPravouhlehoTrojuhelnika() {
+    public void obvodPravouhlehoTrojuhelnika() { assertEquals(7,DomaciUkol.obvodPravouhlehoTrojuhelnika(2,2));
     }
+
 
     @Test
     public void objemKoule() {
