@@ -25,6 +25,8 @@ public class DomaciUkolTest {
 
     @Test
     public void obsahKruhu() {
+        double x = DomaciUkol.obsahKruhu(1);
+        assertEquals(true, 3.13 <= x && x <= 3.15);
     }
 
     @Test
