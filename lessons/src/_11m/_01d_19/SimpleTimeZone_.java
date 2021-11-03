@@ -19,13 +19,13 @@ public class SimpleTimeZone_ {
                 Calendar.MARCH,
                 -1,                        //přesné datum
                 Calendar.SUNDAY,                   //den v týdnu, 0 = nedůležité
-                7200000,                  //začíná ve 2 hodiny ráno (v ms)
+                3600000,                  //začíná ve 2 hodiny ráno (v ms)
                 SimpleTimeZone.UTC_TIME,          //UTC času
                 //údaje o konci letního času
                 Calendar.OCTOBER,
                 -1,
                 Calendar.SUNDAY,
-                7200000,
+                3600000,
                 SimpleTimeZone.UTC_TIME,
                 3600000 //prodloužení o 1 hodinu (v ms)
         );
