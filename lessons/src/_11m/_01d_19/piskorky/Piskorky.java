@@ -28,6 +28,15 @@ public class Piskorky {
 
     private JFrame ramecekHlavni;
 
+    //posluchač událostí stisknutého tlačítka
+    private ActionListener actionListener = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //zde nesmí být this.
+            tlacitkoStisknuto(e);
+        }
+    };
+
     //private BorderLayout bl = new BorderLayout(1,1);
 
     //Hlavní konstruktor třídy Piškorky
@@ -83,13 +92,7 @@ public class Piskorky {
                     //tlačítku přidáme posluchače událostí. Pokud posluchač zachytí nějakou akci,
                     //dojde k vyvolání metody tlacitkoStisknuto s parametrem e, kde je uloženo, co to bylo
                     //za událost a jaká kompanenta jí vyvolala.
-                    b.addActionListener(new ActionListener() {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            //zde nesmí být this.
-                            tlacitkoStisknuto(e);
-                        }
-                    });
+                    b.addActionListener(this.actionListener);
                 }
             }
         }
@@ -121,9 +124,10 @@ public class Piskorky {
         for (int i = 0; i < this.herniPlochaHracu.length; i++) {
             System.out.println(Arrays.toString(this.herniPlochaHracu[i]));
         }
+        stisknuteTlacitko.removeActionListener(this.actionListener);
     }
 
     public static void main(String[] args) {
-        Piskorky p = new Piskorky(19);
+        Piskorky p = new Piskorky(7);
     }
 }

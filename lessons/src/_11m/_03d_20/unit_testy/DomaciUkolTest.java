@@ -49,7 +49,10 @@ public class DomaciUkolTest {
 
     @Test
     public void printBoard() {
+        String[][] expected = {{"██", "  "}, {"  ","██"}};
+        assertArrayEquals(expected, DomaciUkol.printBoard(2, 2));
     }
+
 
     @Test
     public void faktorial() {
