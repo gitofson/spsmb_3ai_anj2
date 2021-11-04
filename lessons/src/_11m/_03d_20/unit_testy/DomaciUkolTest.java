@@ -1,7 +1,7 @@
 package _11m._03d_20.unit_testy;
 
 import _10m._21d_17.DomaciUkol;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.*;
 
