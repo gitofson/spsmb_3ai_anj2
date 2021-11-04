@@ -16,7 +16,7 @@ public class ArraysN {
         arr = null;
 
         // Deklarace pole
-        // v Javě je zaručeno, že všechnyh nové prvnky majhí hodnotu 0, resp. false
+        // v Javě je zaručeno, že všechny nové prvky mají hodnotu 0, resp. false
         int[] arrInt = new int[10];
         // Deklarace s hodnotami
         int[] arrIntTwo = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
