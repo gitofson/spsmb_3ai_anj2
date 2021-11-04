@@ -63,13 +63,18 @@ public class DomaciUkol {
      }
     //OK Pelikán
     //může si vybrat svou úlohu
-    public static void printBoard(int sizeX, int sizeY) {
+    public static String[][] printBoard(int sizeX, int sizeY) {
+        String[][] board = new String[sizeY][sizeX];
+        String temporaryStr;
         for (int i = 0; i < sizeY; i++) {
             for (int j = 0; j < sizeX; j++) {
-                System.out.format("%s", j % 2 == 0 ? "██" : "  ");
+                temporaryStr = (i + j) % 2 == 0 ? "██" : "  ";
+                System.out.print(temporaryStr);
+                board[i][j] = temporaryStr;
             }
-            System.out.print(i % 2 == 0 ? "\n  " : "\n");
+            System.out.println();
         }
+        return board;
     }
 
     //OK Rosenbaum
