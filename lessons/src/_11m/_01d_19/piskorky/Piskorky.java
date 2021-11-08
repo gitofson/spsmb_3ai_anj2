@@ -126,23 +126,43 @@ public class Piskorky {
         }
         //aktualizace panelu kdo táhne
         this.labelKdoTahne2.setText(Hraci.values()[this.aktivniHrac].toString());
-        System.out.println();
-        for (int k = 0; k < this.herniPlochaHracu.length; k++) {
-            System.out.println(Arrays.toString(this.herniPlochaHracu[k]));
-        }
+//        System.out.println();
+//        for (int k = 0; k < this.herniPlochaHracu.length; k++) {
+//            System.out.println(Arrays.toString(this.herniPlochaHracu[k]));
+//        }
         stisknuteTlacitko.removeActionListener(this.actionListener);
         int N = 3;
-        System.out.format("verticalWin:%b, horizontalWin:%b, diagonalwin:%b, isReverseDiagonalWin:%b%n",
-                this.isVerticalWin(i, j, N),
-                this.isHorizontalWin(i, j, N),
-                this.isDiagonalWin(i, j, N),
-                this.isReverseDiagonalWin(i, j, N));
-        /*
-        for (int k = 0; k < j; k++) {
-            if(this.isHorizontalWin(i,k,2)){
-                System.out.println("OK");
+//        System.out.format("verticalWin:%b, horizontalWin:%b, diagonalwin:%b, isReverseDiagonalWin:%b%n",
+//                this.isVerticalWin(i, j, N),
+//                this.isHorizontalWin(i, j, N),
+//                this.isDiagonalWin(i, j, N),
+//                this.isReverseDiagonalWin(i, j, N));
+
+        for (int y = 1; y <= this.herniPlochaHracu.length - N; y++) {
+            if(this.isVerticalWin(y, j, N)) {
+                System.out.println("Vertical");
+                return;
             }
-        }*/
+        }
+        for (int x = 1; x <= this.herniPlochaHracu[i].length - N; x++) {
+            if(this.isHorizontalWin(i, x, N)) {
+                System.out.println("Horizontal");
+                return;
+            }
+        }
+        
+        for (int y = 1; y < this.herniPlochaHracu.length; y++) {
+            for (int x = 1; x < this.herniPlochaHracu[y].length; x++) {
+                if(this.isDiagonalWin(y, x, N)) {
+                    System.out.println("Diagonal");
+                    return;
+                }
+                if(this.isReverseDiagonalWin(y, x, N)) {
+                    System.out.println("ReverseDiagonal");
+                    return;
+                }
+            }
+        }
     }
     private boolean isVerticalWin(int radek, int sloupec, int n){
         int aktualniHrac = this.herniPlochaHracu[radek][sloupec];
