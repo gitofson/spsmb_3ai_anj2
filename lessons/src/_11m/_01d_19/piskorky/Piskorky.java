@@ -56,7 +56,6 @@ public class Piskorky {
         for (int i = 0; i < this.herniPlochaHracu.length ; i++) {
             Arrays.fill(this.herniPlochaHracu[i], (byte) -1);
         }
-
         this.inicializaceGUI();
     }
     private void inicializaceGUI(){
