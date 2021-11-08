@@ -28,7 +28,9 @@ public class Piskorky {
 
     private JFrame ramecekHlavni;
 
-    //posluchač událostí stisknutého tlačítka
+    //posluchač událostí stisknutého tlačítka - vytvoření vnitřní třídy.
+    //výhoda vnitřní třídy je, že vidí na všechny položky (proměnné, metody) třídy
+    //vnější
     private ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -104,13 +106,17 @@ public class Piskorky {
         }
     }
     public void tlacitkoStisknuto(ActionEvent e){
+        int i = 0;
+        int j = 0;
         JButton stisknuteTlacitko = ((JButton)e.getSource());
         stisknuteTlacitko.setText(Hraci.values()[this.aktivniHrac].toString().substring(0,1));
         //nalezení souřadnic tlačítka a nastavení hráče do pole hráčů;
-        for (int i = 0; i < this.rozmerHraciPlochy + 1; i++) {
-            for (int j = 0; j < this.rozmerHraciPlochy + 1; j++) {
+        label01:
+        for ( i = 0; i < this.rozmerHraciPlochy + 1; i++) {
+            for ( j = 0; j < this.rozmerHraciPlochy + 1; j++) {
                 if(this.herniPlochaTlacitek[i][j] == stisknuteTlacitko){
                     this.herniPlochaHracu[i][j] = this.aktivniHrac;
+                    break label01;
                 }
             }
         }
@@ -121,12 +127,91 @@ public class Piskorky {
         //aktualizace panelu kdo táhne
         this.labelKdoTahne2.setText(Hraci.values()[this.aktivniHrac].toString());
         System.out.println();
-        for (int i = 0; i < this.herniPlochaHracu.length; i++) {
-            System.out.println(Arrays.toString(this.herniPlochaHracu[i]));
+        for (int k = 0; k < this.herniPlochaHracu.length; k++) {
+            System.out.println(Arrays.toString(this.herniPlochaHracu[k]));
         }
         stisknuteTlacitko.removeActionListener(this.actionListener);
+        int N = 3;
+        System.out.format("verticalWin:%b, horizontalWin:%b, diagonalwin:%b, isReverseDiagonalWin:%b%n",
+                this.isVerticalWin(i, j, N),
+                this.isHorizontalWin(i, j, N),
+                this.isDiagonalWin(i, j, N),
+                this.isReverseDiagonalWin(i, j, N));
+        /*
+        for (int k = 0; k < j; k++) {
+            if(this.isHorizontalWin(i,k,2)){
+                System.out.println("OK");
+            }
+        }*/
     }
-
+    private boolean isVerticalWin(int radek, int sloupec, int n){
+        int aktualniHrac = this.herniPlochaHracu[radek][sloupec];
+        if(aktualniHrac < 0){
+            return false;
+        }
+        for (int i = radek; i < radek+n; i++) {
+            if (this.rozmerHraciPlochy < i) {
+                return false;
+            }
+            if (aktualniHrac != this.herniPlochaHracu[i][sloupec]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean isHorizontalWin(int radek, int sloupec, int n){
+        int aktualniHrac = this.herniPlochaHracu[radek][sloupec];
+        if(aktualniHrac < 0){
+            return false;
+        }
+        for (int j = sloupec; j < sloupec+n; j++) {
+            if (this.rozmerHraciPlochy < j) {
+                return false;
+            }
+            if (aktualniHrac != this.herniPlochaHracu[radek][j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean isDiagonalWin(int radek, int sloupec, int n) {
+        int aktualniHrac = this.herniPlochaHracu[radek][sloupec];
+        if (aktualniHrac < 0) {
+            return false;
+        }
+        int j = sloupec;
+        for (int i = radek; i > radek - n; i--, j++) {
+            if (i <= 0) {
+                return false;
+            }
+            if (j > this.rozmerHraciPlochy) {
+                return false;
+            }
+            if (aktualniHrac != this.herniPlochaHracu[i][j]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean isReverseDiagonalWin(int radek, int sloupec, int n) {
+        int aktualniHrac = this.herniPlochaHracu[radek][sloupec];
+        if (aktualniHrac < 0) {
+            return false;
+        }
+        int j = sloupec;
+        for (int i = radek; i < radek + n; i++, j++) {
+            if (i > this.rozmerHraciPlochy) {
+                return false;
+            }
+            if (j > this.rozmerHraciPlochy) {
+                return false;
+            }
+            if (aktualniHrac != this.herniPlochaHracu[i][j]) {
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String[] args) {
         Piskorky p = new Piskorky(7);
     }
