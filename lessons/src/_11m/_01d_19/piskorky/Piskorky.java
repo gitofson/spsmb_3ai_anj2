@@ -156,14 +156,22 @@ public class Piskorky {
         while (--y > 0 & --x > 0 );
         //System.out.format("x:%d, y:%d%n", x,y);
         for (; y < this.rozmerHraciPlochy && x < this.rozmerHraciPlochy; y++, x++) {
-                if(this.isDiagonalWin(y, x, N)) {
-                    System.out.println("Diagonal");
-                    return;
-                }
                 if(this.isReverseDiagonalWin(y, x, N)) {
                     System.out.println("ReverseDiagonal");
                     return;
                 }
+        }
+        y = i;
+        x = j;
+        if(y != this.rozmerHraciPlochy) {
+            while (++y < this.rozmerHraciPlochy & --x > 0) ;
+        }
+        System.out.format("x:%d, y:%d%n", x,y);
+        for (; y > 0 && x < this.rozmerHraciPlochy; y--, x++) {
+            if(this.isDiagonalWin(y, x, N)) {
+                System.out.println("Diagonal");
+                return;
+            }
         }
     }
     private boolean isVerticalWin(int radek, int sloupec, int n){
