@@ -150,9 +150,12 @@ public class Piskorky {
                 return;
             }
         }
-        
-        for (int y = 1; y < this.herniPlochaHracu.length; y++) {
-            for (int x = 1; x < this.herniPlochaHracu[y].length; x++) {
+        int y = i;
+        int x = j;
+        //pozor, potřeba použít operátor úplného vyhodnocení
+        while (--y > 0 & --x > 0 );
+        //System.out.format("x:%d, y:%d%n", x,y);
+        for (; y < this.rozmerHraciPlochy && x < this.rozmerHraciPlochy; y++, x++) {
                 if(this.isDiagonalWin(y, x, N)) {
                     System.out.println("Diagonal");
                     return;
@@ -161,7 +164,6 @@ public class Piskorky {
                     System.out.println("ReverseDiagonal");
                     return;
                 }
-            }
         }
     }
     private boolean isVerticalWin(int radek, int sloupec, int n){
