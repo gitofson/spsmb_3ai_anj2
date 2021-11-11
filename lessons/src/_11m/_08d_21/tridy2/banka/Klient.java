@@ -1,5 +1,6 @@
 package _11m._08d_21.tridy2.banka;
 
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
 //Vytvořte třídu Klient, která bude mít jako jednu členskou
@@ -17,5 +18,16 @@ public class Klient {
         this.prijmeni = prijmeni;
         this.adresa = adresa;
         this.datumNarozeni = datumNarozeni;
+    }
+
+    @Override
+    public String toString() {
+        return "Klient{" +
+                "jmeno='" + this.jmeno + '\'' +
+                ", prijmeni='" + this.prijmeni + '\'' +
+                ", adresa='" + this.adresa + '\'' +
+                ", datumNarozeni=" +
+                new SimpleDateFormat("dd.MM.YYYY").format(this.datumNarozeni.getTime()) +
+                '}';
     }
 }
