@@ -15,8 +15,8 @@ public class BankovniUcet {
 
         this.cisloUctu = BankovniUcet.pocitadloCiselUctu;
         this.klient = new Klient(rnd.nextBoolean()?"Pepik":"Franta",
-                prijmeni, "Havlickova 432",
-                new GregorianCalendar(2000,rnd.nextInt(12), rnd.nextInt(28)+1));
+                prijmeni, "Havlickova " + rnd.nextInt(250),
+                new GregorianCalendar(rnd.nextInt(43)+1960,rnd.nextInt(12), rnd.nextInt(28)+1));
         this.zustatek = zustatek;
         //this.BankovniUcet by fungovalo take, ale neni to systemeticky dobře
         BankovniUcet.pocitadloCiselUctu++;

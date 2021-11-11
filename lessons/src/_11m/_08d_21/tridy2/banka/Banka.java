@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Banka {
-    final int N_UCTU = 14;
+    final int N_UCTU = 50;
     public BankovniUcet[] poleUctu = new BankovniUcet[N_UCTU];
     public Banka(){
         for (int i = 0; i < poleUctu.length; i++) {
