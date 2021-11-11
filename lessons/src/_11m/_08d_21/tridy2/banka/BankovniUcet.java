@@ -1,14 +1,22 @@
 package _11m._08d_21.tridy2.banka;
 
+import java.util.GregorianCalendar;
+import java.util.Random;
+
 public class BankovniUcet {
     //standartní inicializace na 0 v Javě u proměnných instance
     private static int pocitadloCiselUctu = 1000000;
+    private static Random rnd = new Random();
     private int zustatek;
-    private String vlastnikUctu;
+    //private String vlastnikUctu;
+    private Klient klient;
     private int cisloUctu;
-    public BankovniUcet(int zustatek, String vlastnikUctu){
+    public BankovniUcet(int zustatek, String prijmeni){
+
         this.cisloUctu = BankovniUcet.pocitadloCiselUctu;
-        this.vlastnikUctu = vlastnikUctu;
+        this.klient = new Klient(rnd.nextBoolean()?"Pepik":"Franta",
+                prijmeni, "Havlickova 432",
+                new GregorianCalendar(2000,rnd.nextInt(12), rnd.nextInt(28)+1));
         this.zustatek = zustatek;
         //this.BankovniUcet by fungovalo take, ale neni to systemeticky dobře
         BankovniUcet.pocitadloCiselUctu++;
@@ -17,8 +25,8 @@ public class BankovniUcet {
         return this.zustatek;
     }
 
-    public String getVlastnikUctu() {
-        return this.vlastnikUctu;
+    public Klient getKlient() {
+        return this.klient;
     }
 
     public int getCisloUctu() {
@@ -40,11 +48,12 @@ public class BankovniUcet {
         }
         return false;
     }
+
     @Override
     public String toString() {
-        return "BankovniUcet{" +
+        return "\nBankovniUcet{" +
                 "zustatek=" + zustatek +
-                ", vlastnikUctu='" + vlastnikUctu + '\'' +
+                ", klient=" + klient +
                 ", cisloUctu=" + cisloUctu +
                 '}';
     }
