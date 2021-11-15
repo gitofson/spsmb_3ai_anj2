@@ -10,12 +10,13 @@ import java.util.Random;
 // a vrátí počet těchto prvků
 public class Ukoly {
     public static void serad(int[] x, int[] y){
-        Arrays.sort(x);
+        
         if (x.length - 1 >= 0) System.arraycopy(x, 0, y, 0, x.length - 1);
+        Arrays.sort(y);
     }
     public  static int sude(int[] x, int[] y){
         int out = 0;
-        for (int i = 0; i < x.length -1; i++) {
+        for (int i = 0; i < x.length; i++) {
             if (x[i] % 2 == 0){
                 out ++;
                 y[out] = x[i];
