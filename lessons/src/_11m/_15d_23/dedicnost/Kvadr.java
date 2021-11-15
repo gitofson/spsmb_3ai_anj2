@@ -6,10 +6,17 @@ public class Kvadr extends Obdelnik {
     public int getHloubka() {
         return hloubka;
     }
+    //pokud se konstruktor předka pomocí super() nezavolá,
+    // doplní si překladač volání konstruktoru předka bez parametrů.
+    // Ten však musí (klidně i implicitní) existovat
     public Kvadr(int sirka, int vyska, int hloubka) {
         super(sirka, vyska);
         this.hloubka = hloubka;
     }
+    //Překrytí metody delkaUhlopricky - změna vlastnosti zděděného objektu.
+    //dekorátor @Override - doporučuji používat, vyhneme se probémům
+    // s překlepy v názvu metody
+    @Override
     public double delkaUhlopricky(){
         return Math.sqrt(
                 super.delkaUhlopricky()*super.delkaUhlopricky()
