@@ -2,6 +2,7 @@ package _11m._11d_22.cviceni;
 //Napište statickou metodu void serad(int[] x, int[] y),
 // která seřadí pole x do pole y vzestupně
 
+import java.util.Arrays;
 import java.util.Random;
 
 //Napište statickou metodu int sude(int[] x, int[] y),
@@ -9,14 +10,19 @@ import java.util.Random;
 // a vrátí počet těchto prvků
 public class Ukoly {
     public static void serad(int[] x, int[] y){
-
+        Arrays.sort(x);
+        if (x.length - 1 >= 0) System.arraycopy(x, 0, y, 0, x.length - 1);
     }
     public  static int sude(int[] x, int[] y){
         int out = 0;
-
+        for (int i = 0; i < x.length -1; i++) {
+            if (x[i] % 2 == 0){
+                out ++;
+                y[out] = x[i];
+            }
+        }
         return out;
     }
-
     public static void main(String[] args) {
         final int N = 100;
         //inicializace polí
@@ -29,7 +35,14 @@ public class Ukoly {
         int[] y = new int[N];
         //volání metod
 
-        //kontrola
+        Ukoly.serad(x, y);
 
+        System.out.println(Arrays.toString(y));
+
+        Ukoly.sude(x,y);
+        System.out.println( Arrays.toString(y));
+
+
+        System.out.println(  Ukoly.sude(x,y) );
     }
 }
