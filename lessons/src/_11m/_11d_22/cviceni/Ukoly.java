@@ -18,8 +18,7 @@ public class Ukoly {
         int out = 0;
         for (int i = 0; i < x.length; i++) {
             if (x[i] % 2 == 0){
-                out ++;
-                y[out] = x[i];
+                y[out++] = x[i];
             }
         }
         return out;
