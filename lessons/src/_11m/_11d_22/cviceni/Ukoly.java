@@ -28,7 +28,7 @@ public class Ukoly {
     }
 
     public static void main(String[] args) {
-        final int N = 1000;
+        final int N = 100;
         Random rnd = new Random();
         int[] x = new int[N];
         for (int i = 0; i < x.length; i++) {
