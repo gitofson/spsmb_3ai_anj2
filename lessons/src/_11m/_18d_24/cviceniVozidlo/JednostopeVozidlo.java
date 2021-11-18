@@ -6,7 +6,7 @@ package _11m._18d_24.cviceniVozidlo;
 // s proměnnou obsahNadrze).
 
 //Ve třídě HorskeKolo překryjte metodu void vypisCoJsiZac() tak, aby
-// vypisovala i počty převodů
+// vypisovala i počty převodů.
 
 public abstract class JednostopeVozidlo {
 }
