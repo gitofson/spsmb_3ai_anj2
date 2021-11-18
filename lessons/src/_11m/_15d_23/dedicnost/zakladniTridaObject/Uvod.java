@@ -10,6 +10,7 @@ package _11m._15d_23.dedicnost.zakladniTridaObject;
 
 //metody, které nelze překrýt:
 //getClass()
+//Tyto se týkají práce s vlákny:
 //notify()
 //notifyAll()
 //wait()
