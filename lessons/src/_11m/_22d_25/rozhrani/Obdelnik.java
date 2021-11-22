@@ -1,0 +1,4 @@
+package _11m._22d_25.rozhrani;
+
+public class Obdelnik {
+}
