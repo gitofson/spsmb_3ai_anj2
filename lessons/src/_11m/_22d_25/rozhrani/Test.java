@@ -6,5 +6,10 @@ public class Test {
         Koule k = new Koule(3);
         u.kdoJsem();
         k.kdoJsem();
+        //rozhraní lze použít jako referenční proměnnou:
+        Info i = new Usecka(5);
+        i.kdoJsem();
+        i = k;
+        i.kdoJsem();
     }
 }
