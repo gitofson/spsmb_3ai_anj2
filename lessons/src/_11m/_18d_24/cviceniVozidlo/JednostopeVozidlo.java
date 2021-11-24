@@ -9,4 +9,7 @@ package _11m._18d_24.cviceniVozidlo;
 // vypisovala i počty převodů.
 
 public abstract class JednostopeVozidlo {
+
+    public abstract void vypisCoJsiZac(String druh);
 }
+
