@@ -8,11 +8,27 @@ package _11m._18d_24.cviceniVozidlo;
 //Ve třídě HorskeKolo překryjte metodu void vypisCoJsiZac() tak, aby
 // vypisovala i počty převodů.
 
-public abstract class JednostopeVozidlo {
-    private String druh;
 
-    public JednostopeVozidlo(String druh) {
+public abstract class JednostopeVozidlo {
+    public String vyrobce;
+    public int cena;
+    public Boolean maPrehazovacku;
+    public String druh;
+
+    public JednostopeVozidlo(String vyrobce, int cena, Boolean maPrehazovacku, String druh) {
+        this.vyrobce = vyrobce;
+        this.cena = cena;
+        this.maPrehazovacku = maPrehazovacku;
         this.druh = druh;
+    }
+
+    @Override
+    public String toString() {
+        return "JednostopeVozidlo" +
+                ", vyrobce='" + vyrobce + '\'' +
+                ", cena=" + cena +
+                ", maPrehazovacku=" + maPrehazovacku +
+                ", druh='" + druh + '\'';
     }
 
     public abstract void vypisCoJsiZac();
