@@ -14,4 +14,12 @@ public class SpojovySeznam {
     public void pridejNaKonec(SpojovySeznam obj){
         this.dalsi=obj;
     }
+
+    public int getHodnota() {
+        return hodnota;
+    }
+
+    public SpojovySeznam getDalsi() {
+        return dalsi;
+    }
 }
