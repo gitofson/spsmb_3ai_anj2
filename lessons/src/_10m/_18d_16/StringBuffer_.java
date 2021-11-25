@@ -53,7 +53,6 @@ public class StringBuffer_ {
         //doma si vyzkoušejte
         // .replace(int počIdx, int koncIdx, String nový podřetězec)
         // .charAt(int idx)
-
         //nahrazení písmena
         b.setCharAt(1,'!');
         System.out.println(b);//3!OJ.14hoj

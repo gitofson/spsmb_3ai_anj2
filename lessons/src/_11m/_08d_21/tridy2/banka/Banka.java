@@ -12,7 +12,7 @@ public class Banka {
     public Banka(){
         for (int i = 0; i < poleUctu.length; i++) {
             Random rand = new Random();
-            poleUctu[i] = new BankovniUcet(rand.nextInt(1000000),
+            poleUctu[i] = new BankovniUcet(rand.nextInt(100),
                     String.format("Klient%03d", i));
         }
     }
