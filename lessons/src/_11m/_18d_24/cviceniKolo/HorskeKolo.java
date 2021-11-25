@@ -6,5 +6,20 @@ public class HorskeKolo extends Kolo {
 
     public HorskeKolo(String vyrobce, int cena, boolean maPrehazovacku) {
         super(vyrobce, cena, true);
+
+    }
+
+    @Override
+    public String toString() {
+        return "HorskeKolo{" +
+                "prevodyVpredu=" + prevodyVpredu +
+                ", prevodyVzadu=" + prevodyVzadu +
+                '}';
+    }
+
+    @Override
+    public void vypisCoJsiZac() {
+        super.vypisCoJsiZac();
+        System.out.println(this.toString());
     }
 }
