@@ -8,16 +8,17 @@ import _11m._18d_24.cviceniVozidlo.JednostopeVozidlo;
 // prevodyVpredu. Zajistěte, aby konstruktor správně vytvářel objekty této
 // třídy (např. proměnná maPrehazovacku musí být vždy true).
 public class Kolo extends JednostopeVozidlo {
-    public String vyrobce;
-    public int cena;
-    public boolean maPrezahovacku;
-    public Kolo(String vyrobce, int cena, boolean maPrezahovacku) {
+    private String vyrobce;
+    private int cena;
+    private boolean maPrehazovacku;
+
+    public Kolo(String vyrobce, int cena, boolean maPrehazovacku) {
         this.vyrobce = vyrobce;
         this.cena = cena;
-        this.maPrezahovacku = maPrezahovacku;
+        this.maPrehazovacku = maPrehazovacku;
     }
     public boolean getMaPrehazovacku(){
-        return maPrezahovacku;
+        return maPrehazovacku;
     }
     public String getVyrobce(){
         return vyrobce;
@@ -31,7 +32,7 @@ public class Kolo extends JednostopeVozidlo {
         return "Kolo{" +
                 "vyrobce='" + vyrobce + '\'' +
                 ", cena=" + cena +
-                ", maPrezahovacku=" + maPrezahovacku +
+                ", maPrehazovacku=" + maPrehazovacku +
                 ", druh='" + druh + '\'' +
                 '}';
     }
