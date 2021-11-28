@@ -15,14 +15,14 @@ class QuickSortLinkedList2 implements Iterable {
             Node current = head;
             @Override
             public boolean hasNext() {
-                return current != null;
+                return this.current != null;
             }
 
             @Override
             public Object next() {
                 if(this.hasNext()){
-                    int data = current.data;
-                    current = current.next;
+                    int data = this.current.data;
+                    this.current = this.current.next;
                     return data;
                 }
                 return null;
