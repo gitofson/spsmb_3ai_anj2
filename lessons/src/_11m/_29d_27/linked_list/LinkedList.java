@@ -35,7 +35,26 @@ public class LinkedList implements Iterable{
             i++;
         }
     }
+    public void bubbleSort(){
+        Node current = this.head;
+        int n = 0;
+        while(current != null){
+            n++;
+            current=current.next;
+        }
+        for (int i = 0; i < n-1; i++) {
+            current = this.head;
+            for (int j = 0; j < n-i-1; j++) {
+                if(current.compareTo(current.next)>0){
+                    int tmp = current.data;
+                    current.data = current.next.data;
+                    current.next.data = tmp;
+                }
+                current = current.next;
+            }
 
+        }
+    }
     @Override
     public Iterator iterator() {
         return new Iterator() {
