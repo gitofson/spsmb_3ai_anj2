@@ -18,4 +18,19 @@ public class LinkedList {
         Node newNode = new Node(data);
         curr.next = newNode;
     }
+
+    public Node getHead() {
+        return head;
+    }
+
+    void printList()
+    {
+        Node n = this.head;
+        int i = 0;
+        while (n != null) {
+            System.out.print(((i%10==0)?"\n":" ") + n.data);
+            n = n.next;
+            i++;
+        }
+    }
 }
