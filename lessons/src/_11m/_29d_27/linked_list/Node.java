@@ -1,10 +1,10 @@
 package _11m._29d_27.linked_list;
 
-public class Uzel {
+public class Node {
     int data;
-    Uzel next;
+    Node next;
 
-    Uzel(int d)
+    Node(int d)
     {
         this.data = d;
         this.next = null;
