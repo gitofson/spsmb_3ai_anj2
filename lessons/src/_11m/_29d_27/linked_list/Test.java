@@ -14,7 +14,12 @@ public class Test {
             ll.append(r.nextInt(150));
         }
         ll.printList();
-        ll.bubbleSort();
+        //ll.bubbleSort();
+
+        Node n = ll.getHead();
+        while (n.next != null)
+            n = n.next;
+        ll.sort(ll.getHead(),n);
         ll.printList();
         /*
         Node n = ll.getHead();
