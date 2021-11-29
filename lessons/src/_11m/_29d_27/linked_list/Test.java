@@ -7,6 +7,16 @@ public class Test {
         ll.append(4);
         ll.append(2);
         ll.printList();
+        Node n = ll.getHead();
+        while (n!=null){
+            System.out.println(n.data + " ");
+            n=n.next;
+        }
+        // Po naimplementování rozhraní Iterable k Třídě LinkedList
+        //máme možnost používat foreach cyklus:
+        for (Object o:ll) {
+            System.out.println(o);
+        }
 
     }
 

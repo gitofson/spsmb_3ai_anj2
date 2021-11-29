@@ -1,6 +1,8 @@
 package _11m._29d_27.linked_list;
 
-public class LinkedList {
+import java.util.Iterator;
+
+public class LinkedList implements Iterable{
     //hlavička, začátek seznamu
     private Node head;
     public void append(int data){
@@ -32,5 +34,28 @@ public class LinkedList {
             n = n.next;
             i++;
         }
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new Iterator() {
+            //Výhoda této vnitřní (a anonymní) třídy:
+            //vidíme na členskou proměnnou (head) vnější třídy
+            private Node current = head;
+            @Override
+            public boolean hasNext() {
+                return this.current != null;
+            }
+
+            @Override
+            public Object next() {
+                if(this.hasNext()){
+                    int data = this.current.data;
+                    this.current = this.current.next;
+                    return data;
+                }
+                return null;
+            }
+        };
     }
 }
