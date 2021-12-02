@@ -29,9 +29,9 @@ public class Test {
         }*/
         // Po naimplementování rozhraní Iterable k Třídě LinkedList
         //máme možnost používat foreach cyklus:
-        //for (Object o:ll) {
-        //    System.out.println(o);
-        //}
+        for (Object o:ll) {
+            System.out.println(o);
+        }
 
     }
 
