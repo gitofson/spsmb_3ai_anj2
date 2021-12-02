@@ -2,13 +2,21 @@ package _11m._29d_27.double_linked_list;
 
 import java.util.Iterator;
 
+// Iterable<Integer> - použití genericity, říkáme které třídy
+// je daný objekt
 public class DoubleLinkedList implements Iterable<Integer>{
     private Node head;
+    private Node tail;
+
+    public Node getTail() {
+        return tail;
+    }
 
     void addNode(int data)
     {
-        if (head == null) {
-            head = new Node(data);
+        if (this.head == null) {
+            this.head = new Node(data);
+            this.tail = this.head;
             return;
         }
 
@@ -18,6 +26,7 @@ public class DoubleLinkedList implements Iterable<Integer>{
 
         Node newNode = new Node(data, curr);
         curr.next = newNode;
+        this.tail = newNode;
     }
 
     void printList(Node n)
@@ -29,6 +38,11 @@ public class DoubleLinkedList implements Iterable<Integer>{
             i++;
         }
     }
+
+    public Node getHead() {
+        return head;
+    }
+
     void swap(Node a, Node b){
         Node tmp, tmpPrev, tmpNext;
         tmpPrev = a.prev;
