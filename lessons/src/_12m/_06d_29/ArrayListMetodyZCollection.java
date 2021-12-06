@@ -1,6 +1,7 @@
 package _12m._06d_29;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListMetodyZCollection {
     public static void tiskni(String jmeno, ArrayList<String> al) {
@@ -46,5 +47,19 @@ public class ArrayListMetodyZCollection {
             System.out.println("[" + i +"]=" + (String) s[i]+ ", ");
         }
         System.out.println();
+
+        System.out.println("Prevod na pole typovaně");
+        String[] s1 = ar1.toArray(new String[0]);
+        System.out.println(Arrays.toString(s1));
+
+        String[] s2 = ar1.toArray(new String[2]);
+        System.out.println(Arrays.toString(s2));
+
+        String[] s3 = ar1.toArray(new String[ar2.size()]);
+        System.out.println(Arrays.toString(s3));
+
+        String[] s4 = ar1.toArray(new String[ar2.size()+2]);
+        System.out.println(Arrays.toString(s4));
+
     }
 }
