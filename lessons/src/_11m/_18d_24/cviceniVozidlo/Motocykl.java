@@ -14,4 +14,15 @@ public class Motocykl extends JednostopeVozidlo{
         System.out.println(super.toString()+" ,obsah nadrze= " + obsahNadrze);
 
     }
+
+    @Override
+    public String toString() {
+        return "Motocykl{" +
+                "vyrobce='" + vyrobce + '\'' +
+                ", cena=" + cena +
+                ", maPrehazovacku=" + maPrehazovacku +
+                ", druh='" + druh + '\'' +
+                ", obsahNadrze=" + obsahNadrze +
+                '}';
+    }
 }

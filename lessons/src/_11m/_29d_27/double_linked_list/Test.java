@@ -6,6 +6,9 @@ public class Test {
         dll.addNode(1);
         dll.addNode(2);
         dll.addNode(3);
-        dll.printList(dll.getHead());
+        //dll.printList(dll.getHead());
+        for ( Integer data:dll ) {
+            System.out.println(data+" ");
+        }
     }
 }
