@@ -50,7 +50,7 @@ public class VlastniTridaJakoPrvekSeznamu {
 
         //podseznam je pouze pohled do seznamu, nikoliv nový
         //seznam. Změna prvků v podseznamu se tak promítá do
-        //hlavního seznamu a naopak.
+        //hlavního seznamu.
         System.out.println("Vytvoreni podseznamu");
         List<CeleCislo> s1 = ar.subList(2,5);
         tiskni("s1", s1);
