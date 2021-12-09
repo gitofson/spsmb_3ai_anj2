@@ -1,5 +1,7 @@
 package _12m._06d_29.trida_collections;
 
+import _09m._22d_7.Condition;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,7 +55,46 @@ public class ClassCollections {
         //int frequency(Collection<?> c, Object c);
 
         List<Osoba> sez = new ArrayList<Osoba>();
-        sez.add(new Osoba(186,82.5,"muz"));
+        sez.add(new Osoba(186,96.5,"muz"));
+        sez.add(new Osoba(172,63.0,"zena"));
+        sez.add(new Osoba(105,26.1,"dite"));
+        sez.add(new Osoba(116,82.5,"obezni trpaslik"));
+        sez.add(new Osoba(210,94.2,"obr"));
+
+        //Přirozené řazení - využívá metody compareTo() v dané třídě,
+        //která by tak měla implementovat rozhraní Comparable
+        System.out.println(sez);
+        Collections.sort(sez);
+        System.out.println(sez);
+
+        //Absolutní řazení - Využíváme pomocných tříd implementující
+        //rozhraní Comparator
+        Collections.sort(sez, new KomparatorOsobyPodleVysky());
+        System.out.println(sez);
+        Collections.sort(sez, new KomparatorOsobyPodlePopisu());
+        System.out.println(sez);
+        Collections.sort(sez, new KomparatorOsobyPodleVahy());
+        System.out.println(sez);
+        //otočení seznamu
+        Collections.reverse(sez);
+        System.out.println(sez);
+        //Zamíchání seznamu
+        Collections.shuffle(sez);
+        System.out.println(sez);
+        //Stačí přirozeně, compareTo() metoda zohledňuje váhu
+        System.out.format("Nejlehčí: %s%n", Collections.min(sez));
+        //musím použít absolutní řazení
+        System.out.format("Nejvyšší: %s%n",
+                Collections.max(sez, new KomparatorOsobyPodleVysky()));
+        //Naplnění seznamu daným prvkem
+        Osoba robot = new Osoba(180, 75, "robot");
+        Collections.fill(sez, robot);
+        System.out.println("Vyplněno: " + sez);
+        //Počet stejných prvků v seznamu:
+        System.out.println("Počet robotů: " +
+                Collections.frequency(sez, robot));
+
+
 
 
 
@@ -61,3 +102,4 @@ public class ClassCollections {
     }
 
 }
+
