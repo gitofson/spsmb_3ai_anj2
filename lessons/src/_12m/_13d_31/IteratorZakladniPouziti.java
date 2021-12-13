@@ -35,9 +35,9 @@ public class IteratorZakladniPouziti {
             h.next().tisk();
         }
         //procházení pomocí iterátoru - způsob while
-        while (true) {
+        Iterator<Hruska> h = kosHrusek.iterator();
+        while (h.hasNext()) {
             h.next().tisk();
-        }
         }
     }
 }
