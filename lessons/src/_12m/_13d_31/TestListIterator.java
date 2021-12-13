@@ -18,5 +18,10 @@ public class TestListIterator {
             System.out.println(it.previous() + ", ");
         }
         System.out.println("]");
+        System.out.println("Seznam popredu: [");
+        for (ListIterator<String> it = list.listIterator(); it.hasNext(); ){
+            System.out.println(it.next() + ", ");
+        }
+        System.out.println("]");
     }
 }
