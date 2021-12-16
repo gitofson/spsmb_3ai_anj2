@@ -24,6 +24,9 @@ public class HruskyVSerazeneMnozine {
         //které jsou uloženy za hraničním prvkem včetně
         pom = st.tailSet(new Hruska(25));
         System.out.println("Nad 25 včetně: " + pom.size()+" "+pom);
-
+        //Podmnožina z množiny je tzv. mělká kopie, tzn., že modifikace
+        // modifikace množiny ovlivní podmnožinu a naopak. Oproti seznamům
+        //a podseznamům je možné do nadřazených množin přidávat, resp. ubírat
+        //prvky
     }
 }
