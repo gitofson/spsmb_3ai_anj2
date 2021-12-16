@@ -1,6 +1,8 @@
 package _12m._16d_32;
 
+
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -14,8 +16,11 @@ public class HashSetATreeSet {
             System.out.println("prvek treti nevlozen");
         }
         System.out.println(st.size() + " " +st);
-        for (String s: st) {
+        /*for (String s: st) {
             System.out.print(s + ", ");
+        }*/
+        for (Iterator<String> h = st.iterator(); h.hasNext();) {
+            System.out.print(h.next() + (h.hasNext()?", ":""));
         }
         if(st.contains("treti")) {
             System.out.println("\n'treti' je v mnozine");
