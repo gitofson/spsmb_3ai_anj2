@@ -18,6 +18,22 @@ class Hruska implements Comparable<Hruska>{
     }
 
     @Override
+    public int hashCode() {
+        return this.cena;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this) {
+            return true;
+        }
+        if(obj instanceof Hruska == false) {
+            return false;
+        }
+        return (cena == ((Hruska) obj).cena);
+    }
+
+    @Override
     public String toString() {
         return String.format("%d", this.cena);
     }
