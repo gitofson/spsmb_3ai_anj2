@@ -4,33 +4,6 @@ import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.*;
 
-class Vaha {
-    double vaha;
-
-    public Vaha(double vaha) {
-        this.vaha = vaha;
-    }
-
-    @Override
-    public String toString() {
-        return "" +vaha ;
-    }
-    @Override
-    public int hashCode() {
-        return (int) this.vaha;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(obj == this) {
-            return true;
-        }
-        if(obj instanceof Vaha == false) {
-            return false;
-        }
-        return (this.vaha == ((Vaha) obj).vaha);
-    }
-}
 public class HashMapZakladniPouziti {
     public static void main(String[] args) {
         HashMap<String, Vaha> hm = new HashMap<>();
@@ -78,6 +51,8 @@ public class HashMapZakladniPouziti {
         Vaha[] vahy = hm.values().toArray(new Vaha[0]);
         System.out.println("Pole vah: "+ Arrays.toString(vahy));
         //Převod klíčů z mapy na pole
+        String[] keys = hm.keySet().toArray(new String[0]);
+        System.out.println("Pole klíčů: "+ Arrays.toString(vahy));
 
 
 
