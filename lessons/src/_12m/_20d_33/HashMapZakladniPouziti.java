@@ -15,7 +15,7 @@ class Vaha {
     }
     @Override
     public int hashCode() {
-        return this.cena;
+        return (int) this.vaha;
     }
 
     @Override
