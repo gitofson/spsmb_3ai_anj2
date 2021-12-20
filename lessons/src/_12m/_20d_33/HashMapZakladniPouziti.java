@@ -1,9 +1,8 @@
 package _12m._20d_33;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
+import jdk.swing.interop.SwingInterOpUtils;
+
+import java.util.*;
 
 class Vaha {
     double vaha;
@@ -65,9 +64,22 @@ public class HashMapZakladniPouziti {
         //transformace na jiný typ kolekce:
         //toto nelze
         //ArrayList<Vaha> = (ArrayList<Vaha>) hm.values();
+        //toto ano
+        ArrayList<Vaha> alv = new ArrayList<>(hm.values());
         Collection<Vaha> col = hm.values();
         //použijte cyklus pro iteraci všech prvků v kolekci col:
         Iterator<Vaha> it = col.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+        System.out.println("Vahy: " + col);
+        System.out.println("Mapa: " + hm);
+        //Převod hodnot z mapy na pole
+        Vaha[] vahy = hm.values().toArray(new Vaha[0]);
+        System.out.println("Pole vah: "+ Arrays.toString(vahy));
+        //Převod klíčů z mapy na pole
+
+
 
 
 
