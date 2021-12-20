@@ -206,7 +206,7 @@ class TypyTestu {
 
 public class RychlostList {
     public static void main(String[] args) {
-        for (int i = 1; i < TypyTestu.POCET_RADU ; i++) {
+        for (int i = 1; i <= TypyTestu.POCET_RADU ; i++) {
             System.out.println("Velikost pole: "+TypyTestu.pocetPrvku);
             new TypyTestu(new ArrayList<Integer>()).testy();
             new TypyTestu(new ArrayList<Integer>(TypyTestu.pocetPrvku)).testy();
