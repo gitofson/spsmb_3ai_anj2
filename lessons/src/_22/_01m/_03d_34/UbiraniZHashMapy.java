@@ -22,6 +22,7 @@ public class UbiraniZHashMapy {
         kl.remove("Robot1");
         kl.remove("Robot2");
         System.out.println("Mapa bez Robot1,2: " + hm);
+        //odstranění prvku z mapy podle hodnoty:
 
     }
 }
