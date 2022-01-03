@@ -2,9 +2,7 @@ package _22._01m._03d_34;
 
 import _12m._20d_33.Vaha;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 
 public class UbiraniZHashMapy {
     static void naplneniMapyATisk(HashMap<String, Vaha> hm) {
@@ -22,12 +20,24 @@ public class UbiraniZHashMapy {
         //odstranění prvku z množiny klíčů a tím i z mapy:
         kl.remove("Robot1");
         kl.remove("Robot2");
-        System.out.println("mapa bez Robot1,2: " + hm);
+        System.out.println("Mapa bez Robot1,2: " + hm);
         //odstranění prvku z množiny hodnot a tím i z mapy:
         naplneniMapyATisk(hm);
         Collection<Vaha> hod = hm.values();
         hod.remove(new Vaha(51));
-        System.out.println("Hodnoty bez Váhy 51:" + hm);
+        System.out.println("Mapa bez Váhy 51:" + hm);
+        //odstranění každého sudého Map.Entry a tím i prvku z množiny
+        naplneniMapyATisk(hm);
+        for(Iterator<Map.Entry<String, Vaha>>
+            it = hm.entrySet().iterator(); it.hasNext(); ){
+            String s = (String) it.next().getKey();
+            char c = s.charAt(s.length() - 1);
+            int i = Character.digit(c, 10);
+            if(i % 2 == 0) {
+                it.remove();
+            }
+        }
+        System.out.println("Mapa bez sudých:" + hm);
 
     }
 }
