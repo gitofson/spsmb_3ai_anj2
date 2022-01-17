@@ -3,6 +3,7 @@ package _22y._01m._10d_36.domaci_ukol;
 import java.security.Key;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Objects;
 
 class Ovoce {
     private int cena;
@@ -28,6 +29,19 @@ class Ovoce {
                 "Kč, typ='" + typ + '\'' +
                 '}';
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ovoce ovoce = (Ovoce) o;
+        return cena == ovoce.cena ;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.cena;
     }
 }
 
