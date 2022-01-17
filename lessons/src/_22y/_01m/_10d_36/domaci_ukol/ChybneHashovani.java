@@ -1,5 +1,7 @@
 package _22y._01m._10d_36.domaci_ukol;
 
+import java.security.Key;
+import java.util.HashMap;
 import java.util.HashSet;
 
 class Ovoce {
@@ -10,11 +12,22 @@ class Ovoce {
         this.cena = cena;
         this.typ = "Jablko";
     }
+
+    public int getCena() {
+        return cena;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+
     @Override
     public String toString() {
         return  "{cena=" + cena +
                 "Kč, typ='" + typ + '\'' +
                 '}';
+
     }
 }
 
@@ -29,11 +42,12 @@ public class ChybneHashovani {
         System.out.println("obsahuje 7:" + intSet.contains(Integer.valueOf(7)));
 
         System.out.println("Toto hashovani nefunguje, opravte:");
-        HashSet<Ovoce> ovoceSet = new HashSet<>();
+        HashMap<Integer, String> ovoceSet = new HashMap<>();
         for (int i = 6; i <= 8; i++) {
-            ovoceSet.add(new Ovoce(i));
+            Ovoce ovc = new Ovoce(i);
+            ovoceSet.put(ovc.getCena(), ovc.getTyp());
         }
         System.out.println("ovoceSet: " + ovoceSet);
-        System.out.println("obsahuje 7:" + ovoceSet.contains(new Ovoce(7)));
+        System.out.println("obsahuje 7:" + ovoceSet.containsKey(7));
     }
 }
