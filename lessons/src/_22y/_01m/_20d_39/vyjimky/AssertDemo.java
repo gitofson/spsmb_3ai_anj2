@@ -5,6 +5,8 @@ public class AssertDemo {
         int i = 1;
         System.out.println("i = " + i + ": ");
         try{
+            //aby toto fungovalo, je potřeba do VMOptions přidat parametr
+            //-enableassertions, resp. -ea
             assert(i == 0)  //Test splnění požadované podmínky
                 : "\nPříkaz assert vyhodil výjimku"; // Zpráva při nespnění
         }
