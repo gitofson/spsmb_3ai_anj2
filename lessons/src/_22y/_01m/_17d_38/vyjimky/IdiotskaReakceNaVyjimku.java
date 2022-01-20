@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 // Nejhorší možný způsob reakce na výjimku - nedělat v bloku catch nic
 public class IdiotskaReakceNaVyjimku {
-    public static int[] vytvorANactiPole() throws FileNotFoundException {
+    public static int[] vytvorANactiPole() {
         int[] pole = null;
         try {
-            Scanner sc = new Scanner(new File("dat0a.txt"));
+            Scanner sc = new Scanner(new File("d2ata.txt"));
             int n = sc.nextInt();
             pole = new int[n];
             for (int i = 0; i < n; i++) {
@@ -21,11 +21,19 @@ public class IdiotskaReakceNaVyjimku {
         catch (Exception e) {
             // !!! Opravdu by zde mělo něco být !!!
 
+            //např. následující výpis zásobníku, případně chyby
+            //e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println(e.getLocalizedMessage());
+
+            //nebo je možné převézt kontrolovanou výjimku na nekontrolovanou
+            throw new RuntimeException(e);
+
         }
-        return pole;
+        //return pole;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         int[] abc = vytvorANactiPole();
         System.out.println(Arrays.toString(abc));
     }
