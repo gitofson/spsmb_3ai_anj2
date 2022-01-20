@@ -23,11 +23,11 @@ public class IdiotskaReakceNaVyjimku {
 
             //např. následující výpis zásobníku, případně chyby
             //e.printStackTrace();
-            System.out.println(e.getMessage());
-            System.out.println(e.getLocalizedMessage());
+            //System.out.println(e.getMessage());
+            //System.out.println(e.getLocalizedMessage());
 
             //nebo je možné převézt kontrolovanou výjimku na nekontrolovanou
-            throw new RuntimeException(e);
+            throw new RuntimeException("Stala se chyba",e);
 
         }
         //return pole;
