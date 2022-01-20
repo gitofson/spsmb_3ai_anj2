@@ -1,4 +1,4 @@
-package _22y._01m._17d_38.vyjimky;
+package _22y._01m._20d_39.vyjimky;
 
 public class ViceBlokuCatchAKoncovka {
     //generátor 4 různých výjimek
