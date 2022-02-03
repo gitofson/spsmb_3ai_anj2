@@ -15,11 +15,28 @@ package _22y._01m._20d_39.cviceni;
  */
 import java.io.IOException;
 
+class SeznamExeption extends Exception {
+    public SeznamExeption() { super("Zprava"); }
+}
+
+class Seznam extends RuntimeException {
+
+    private int cislo = 0;
+    Seznam (int jake) { this.cislo = jake; }
+    public int najdiCislo(int jake) throws SeznamExeption {
+        System.out.println("Cislo je " + jake);
+        return jake;
+    }
+}
+
 public class Zadani {
 
+
+
     public static void main(String[] args) {
-        try{
+        /*try{
             SpojovySeznam ss = new SpojovySeznam();
+            SeznamExeption se = new SeznamExeption();
             ss.vloz("ahoj");
             ss.vloz(Integer.valueOf(5));
             ss.vypisSeznam();
@@ -28,15 +45,12 @@ public class Zadani {
             System.out.println(ss.vyjmiPrvniho());
             System.out.println(ss.vyjmiPrvniho());
 
-        }
-        catch(Exception e) {
 
-        }/*
-        catch (IOException e) {
-            //tento blok nikdy nenastane, neboť IOException je
-            //potomkem třídy Exception, která je uvedená v catch
-            //nahoře.
+
+        }
+        catch(SeznamExeption e) {
 
         }*/
+
     }
 }
