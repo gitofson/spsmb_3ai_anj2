@@ -60,17 +60,15 @@ public class DomaciUkol {
                     lines.get(i).toUpperCase(Locale.ROOT) + (i == lines.size() - 1 ? "": "\n"),
                     StandardOpenOption.APPEND);
         }
-        for (String line : lines) {
-        }
     }
 
     public static void howManyFile() throws IOException {
         HashMap<String, Integer> values = new HashMap<String, Integer>();
         HashMap<String, Integer> valuesPerRow = new HashMap<String, Integer>();
 
-        String temp = "%s:\n";
+        StringBuilder temp = new StringBuilder("%s:\n");
         for (String charKey : charKeys) {
-            temp += String.format("\t%-15s%s\n", charKey + ":", "%d");
+            temp.append(String.format("\t%-15s%s\n", charKey + ":", "%d"));
         }
 
         for (int i = 0; i < lines.size(); i++) {
@@ -78,7 +76,7 @@ public class DomaciUkol {
                 checkChar(values, c);
                 checkChar(valuesPerRow, c);
             }
-            Files.writeString(howMany, formatString(valuesPerRow, temp, "" + i, false),
+            Files.writeString(howMany, formatString(valuesPerRow, temp.toString(), "" + i, false),
                     StandardOpenOption.APPEND);
             valuesPerRow = new HashMap<String, Integer>();
 
@@ -87,7 +85,7 @@ public class DomaciUkol {
             }
             addToHM(values, 6);
         }
-        Files.writeString(howMany, formatString(values, temp, "File"),
+        Files.writeString(howMany, formatString(values, temp.toString(), "File"),
                         StandardOpenOption.APPEND);
     }
 
