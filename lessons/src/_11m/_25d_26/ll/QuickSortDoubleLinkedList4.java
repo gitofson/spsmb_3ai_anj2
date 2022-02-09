@@ -4,14 +4,12 @@ package _11m._25d_26.ll;
 // https://www.geeksforgeeks.org/quicksort-on-singly-linked-list/
 // https://stackoverflow.com/questions/33072986/iterator-for-a-linkedlist
 
-import org.junit.runner.manipulation.Sortable;
-import org.junit.runner.manipulation.Sorter;
-
 import java.util.Iterator;
+import java.util.Random;
 
 /*sort a linked list using quick sort*/
 public
-class QuickSortLinkedList2 implements Iterable {
+class QuickSortDoubleLinkedList4 implements Iterable {
     @Override
     public Iterator iterator() {
         return new Iterator() {
@@ -37,14 +35,24 @@ class QuickSortLinkedList2 implements Iterable {
         };
     }
 
-    static class Node {
+    static class Node implements Comparable {
         int data;
+        Node prev;
         Node next;
 
-        Node(int d)
-        {
+        public Node(int d, Node prev) {
             this.data = d;
             this.next = null;
+            this.prev = prev;
+        }
+
+        public Node(int d) {
+            this(d, null);
+        }
+
+        @Override
+        public int compareTo(Object o) {
+            return this.data - ((Node)o).data;
         }
     }
 
@@ -61,60 +69,97 @@ class QuickSortLinkedList2 implements Iterable {
         while (curr.next != null)
             curr = curr.next;
 
-        Node newNode = new Node(data);
+        Node newNode = new Node(data, curr);
         curr.next = newNode;
     }
 
     void printList(Node n)
     {
+        int i = 0;
         while (n != null) {
-            System.out.print(n.data);
-            System.out.print(" ");
+            System.out.print(((i%10==0)?"\n":" ") + n.data);
             n = n.next;
+            i++;
+        }
+    }
+    void swap(Node a, Node b){
+        Node tmp, tmpPrev, tmpNext;
+        tmpPrev = a.prev;
+        tmpNext = a.next;
+
+
+        if(a.prev != null) {
+            a.prev.next=b;
+        }
+        if(a.next != null){
+            a.next.prev=b;
+        }
+        if (b.prev != null) {
+            b.prev.next=a;
+        }
+        if(b.next != null) {
+            b.next.prev=a;
+        }
+        a.prev = b.prev;
+        a.next = b.next;
+        b.prev = tmpPrev;
+        b.next = tmpNext;
+        if(a.prev==null){
+            this.head=a;
+        }
+        if(b.prev==null){
+            this.head=b;
         }
     }
 
     // takes first and last node,
     // but do not break any links in
     // the whole linked list
-    Node paritionLast(Node start, Node end)
-    {
-        if (start == end || start == null || end == null)
-            return start;
+    Node paritionLast(Node start, Node end) {
+        //if (start == end || start == null || end == null)
+        //    return start;
 
-        Node pivot_prev = start;
-        Node curr = start;
-        int pivot = end.data;
+        //Node pivot_prev = start;
+        Node ni = start;
+        Node nj = end;
+        Node tmpi, tmpj;
+        //int pivot = end.data;
 
         // iterate till one before the end,
         // no need to iterate till the end
         // because end is pivot
-        while (start != end) {
-            if (start.data < pivot) {
-                // keep tracks of last modified item
-                pivot_prev = curr;
-                int temp = curr.data;
-                curr.data = start.data;
-                start.data = temp;
-                curr = curr.next;
+        loop01:
+        while (true) {
+            if((nj=nj.prev) == null) break;
+            while(ni.compareTo(nj) < 0) {
+                ni=ni.next;
             }
-            start = start.next;
+            while(nj.compareTo(ni) > 0){
+                nj=nj.prev;
+                if(nj == ni) break loop01;
+            }
+            if(ni != null || nj != null) break;
+            tmpi=ni.next;
+            tmpj=nj.prev;
+            this.swap(ni,nj);
+            ni=tmpi.prev;
+            nj=tmpj.next;
         }
 
         // swap the position of curr i.e.
         // next suitable index and pivot
-        int temp = curr.data;
-        curr.data = pivot;
-        end.data = temp;
+        this.swap(ni, end);
+        //int temp = curr.data;
+        //curr.data = pivot;
+        //end.data = temp;
 
         // return one previous to current
         // because current is now pointing to pivot
-        return pivot_prev;
+        return ni;
     }
 
-    void sort(Node start, Node end)
-    {
-        if(start == null || start == end|| start == end.next )
+    void sort(Node start, Node end) {
+        if(start == null || start == end || end == null )
             return;
 
         // split list and partition recurse
@@ -124,31 +169,36 @@ class QuickSortLinkedList2 implements Iterable {
         // if pivot is picked and moved to the start,
         // that means start and pivot is same
         // so pick from next of pivot
-        if (pivot_prev != null && pivot_prev == start)
-            sort(pivot_prev.next, end);
+        //if (pivot_prev != null )
+        sort(pivot_prev.next, end);
 
             // if pivot is in between of the list,
             // start from next of pivot,
             // since we have pivot_prev, so we move two nodes
-        else if (pivot_prev != null
-                && pivot_prev.next != null)
-            sort(pivot_prev.next.next, end);
+        //else if (pivot_prev != null
+        //        && pivot_prev.next != null)
+        //    sort(pivot_prev.next.next, end);
     }
 
     // Driver Code
     public
     static void main(String[] args)
     {
-        QuickSortLinkedList2 list
-                = new QuickSortLinkedList2();
+        QuickSortDoubleLinkedList4 list
+                = new QuickSortDoubleLinkedList4();
         list.addNode(30);
         list.addNode(3);
         list.addNode(4);
         list.addNode(20);
         list.addNode(5);
-
+        //Random r = new Random();
+        //for (int i=0; i<5; i++){
+        //    list.addNode(r.nextInt(1000));
+        //}
+        int i=0;
         for (Object n: list) {
-            System.out.println(n);
+            i++;
+            System.out.print(((i%10==0)?"\n":" ") + n);
         }
         Node n = list.head;
         while (n.next != null)
@@ -158,6 +208,7 @@ class QuickSortLinkedList2 implements Iterable {
         list.printList(list.head);
 
         list.sort(list.head, n);
+        //list.swap(list.head.next,list.head.next.next.next.next);
 
         System.out.println("\nLinked List after sorting");
         list.printList(list.head);

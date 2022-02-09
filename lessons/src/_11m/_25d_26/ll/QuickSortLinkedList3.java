@@ -4,14 +4,12 @@ package _11m._25d_26.ll;
 // https://www.geeksforgeeks.org/quicksort-on-singly-linked-list/
 // https://stackoverflow.com/questions/33072986/iterator-for-a-linkedlist
 
-import org.junit.runner.manipulation.Sortable;
-import org.junit.runner.manipulation.Sorter;
-
 import java.util.Iterator;
+import java.util.Random;
 
 /*sort a linked list using quick sort*/
 public
-class QuickSortLinkedList2 implements Iterable {
+class QuickSortLinkedList3 implements Iterable {
     @Override
     public Iterator iterator() {
         return new Iterator() {
@@ -37,7 +35,7 @@ class QuickSortLinkedList2 implements Iterable {
         };
     }
 
-    static class Node {
+    static class Node implements Comparable {
         int data;
         Node next;
 
@@ -45,6 +43,11 @@ class QuickSortLinkedList2 implements Iterable {
         {
             this.data = d;
             this.next = null;
+        }
+
+        @Override
+        public int compareTo(Object o) {
+            return this.data - ((Node)o).data;
         }
     }
 
@@ -67,18 +70,18 @@ class QuickSortLinkedList2 implements Iterable {
 
     void printList(Node n)
     {
+        int i = 0;
         while (n != null) {
-            System.out.print(n.data);
-            System.out.print(" ");
+            System.out.print(((i%10==0)?"\n":" ") + n.data);
             n = n.next;
+            i++;
         }
     }
 
     // takes first and last node,
     // but do not break any links in
     // the whole linked list
-    Node paritionLast(Node start, Node end)
-    {
+    Node paritionLast(Node start, Node end) {
         if (start == end || start == null || end == null)
             return start;
 
@@ -90,7 +93,7 @@ class QuickSortLinkedList2 implements Iterable {
         // no need to iterate till the end
         // because end is pivot
         while (start != end) {
-            if (start.data < pivot) {
+            if (start.compareTo(end) < 0) {
                 // keep tracks of last modified item
                 pivot_prev = curr;
                 int temp = curr.data;
@@ -112,8 +115,7 @@ class QuickSortLinkedList2 implements Iterable {
         return pivot_prev;
     }
 
-    void sort(Node start, Node end)
-    {
+    void sort(Node start, Node end) {
         if(start == null || start == end|| start == end.next )
             return;
 
@@ -139,16 +141,21 @@ class QuickSortLinkedList2 implements Iterable {
     public
     static void main(String[] args)
     {
-        QuickSortLinkedList2 list
-                = new QuickSortLinkedList2();
+        QuickSortLinkedList3 list
+                = new QuickSortLinkedList3();
         list.addNode(30);
         list.addNode(3);
         list.addNode(4);
         list.addNode(20);
         list.addNode(5);
-
+        Random r = new Random();
+        for (int i=0; i<100; i++){
+            list.addNode(r.nextInt(1000));
+        }
+        int i=0;
         for (Object n: list) {
-            System.out.println(n);
+            i++;
+            System.out.print(((i%10==0)?"\n":" ") + n);
         }
         Node n = list.head;
         while (n.next != null)
