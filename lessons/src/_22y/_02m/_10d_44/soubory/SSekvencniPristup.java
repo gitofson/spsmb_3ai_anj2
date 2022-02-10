@@ -47,16 +47,18 @@ public class SSekvencniPristup {
         pocet = frw.readInt();
         //int je velký 4 byte
         posun = 4 * pocet;
-        frw.seek(posun);
+        frw.skipBytes((int)(posun-4));
         //přepis posledního int v souboru
         frw.writeInt(1234);
+        //návrat na pozici právě uložené hodnoty
+        frw.seek(posun);
         k = frw.readInt();
         System.out.println(k);
 
         //double je velký 8 byte
         frw.skipBytes(8);
         double e = frw.readDouble();
-        System.out.println("\n" + e);
+        System.out.println("\nE: " + e);
         frw.close();
     }
 }
