@@ -9,6 +9,8 @@ package _22y._02m._03d_42;
 // Napište program, který přečte soubor pismena.txt po řádcích. Každou
 // řádku přesně opíše do souboru kolik.txt a v něm na další řádce uvede,
 // kolik malých písmen na ní bylo
+
+
 import java.io.*;
 public class DomaciUkol {
     public static void main(String[] args) {
