@@ -11,4 +11,7 @@ package _22y._02m._10d_44;
 // uloží do souboru poleint.bin jako binární čísla (použijte writeInt() ze třídy
 // DataOutputStream). Porovnejte velikosti souborů pole.txt a poleint.bin
 public class DomaciUkol {
+    public static void main(String[] args) {
+        System.out.println("neco");
+    }
 }
