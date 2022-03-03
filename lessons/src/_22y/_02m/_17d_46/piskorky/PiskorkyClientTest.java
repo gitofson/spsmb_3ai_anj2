@@ -34,6 +34,8 @@ public class PiskorkyClientTest {
                             e.printStackTrace();
                         }
                         break;
+                        //Způsob získání instance třídy PiskorkyStatus pro aktualizaci
+                        //hry po tahu libovolného hráče.
                     case 20:
                         try (var reader = new ObjectInputStream(socket.getInputStream())){
                             PiskorkyStatus ps = (PiskorkyStatus) reader.readObject();
