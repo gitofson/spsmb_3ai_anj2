@@ -11,6 +11,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 //add --module-path "Y:\stemberk\verejne_zaci\javafx-sdk-17.0.1\lib" --add-modules javafx.controls,javafx.fxml
 public class PiskorkyFX extends Application {
     private final String VERSION = "1.0";
@@ -21,15 +26,16 @@ public class PiskorkyFX extends Application {
     private Label labelKdoTahne = new Label("Táhne: ");
     private Label labelKdoTahne2 = new Label();
     private HBox panelKdoHraje = new HBox(labelKdoTahne, labelKdoTahne2);
+
     public void obnovaPlochy() {
         for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
             for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
                 Button b = this.herniTlacitka[i][j];
                 //b.getProperties().clear();
                 //b.getProperties().putAll(this.ps.herniTlacitka[i][j]);
-                int hracId = (int)this.ps.herniTlacitka[i][j].get("player");
+                int hracId = (int) this.ps.herniTlacitka[i][j].get("player");
                 //System.out.println(b.getProperties());
-                b.setText(hracId < 0? "":this.ps.hraci.get(hracId).toString().substring(0, 1));
+                b.setText(hracId < 0 ? "" : this.ps.hraci.get(hracId).toString().substring(0, 1));
             }
         }
     }
@@ -42,7 +48,7 @@ public class PiskorkyFX extends Application {
             for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
                 for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
                     Button b = new Button();
-                    b.setPrefSize(28,28);
+                    b.setPrefSize(28, 28);
                     this.herniTlacitka[i][j] = b;
                     //node, sloupec, řádek - ano je to obráceně oproti dosavaním principům
                     gp.add(b, j, i);
@@ -53,7 +59,7 @@ public class PiskorkyFX extends Application {
                         //b.setStyle("-fx-border-width: 10.0; -fx-border-color: navy;");
                         // b.setStyle(" -fx-background-color: navy;");
                         b.setStyle("-fx-border-color: navy;");
-                        b.setText(i==0?String.valueOf(j):String.valueOf(i));
+                        b.setText(i == 0 ? String.valueOf(j) : String.valueOf(i));
                     }
                 }
             }
@@ -65,7 +71,7 @@ public class PiskorkyFX extends Application {
             stage.setScene(scene);
             stage.show();
             this.obnovaPlochy();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
@@ -76,19 +82,19 @@ public class PiskorkyFX extends Application {
         int i = 0, j = 0;
         Button stisknuteTlacitko = ((Button) actionEvent.getSource());
         System.out.println(stisknuteTlacitko.getProperties());
-        i=(int)stisknuteTlacitko.getProperties().get("gridpane-row");
-        j=(int)stisknuteTlacitko.getProperties().get("gridpane-column");
+        i = (int) stisknuteTlacitko.getProperties().get("gridpane-row");
+        j = (int) stisknuteTlacitko.getProperties().get("gridpane-column");
         System.out.format("i:%d, j:%d%n", i, j);
         //stisknuteTlacitko.setText(this.ps.hraci.get(this.ps.aktivniHrac).toString().substring(0, 1));
         //this.ps.herniPlochaHracu[i][j] = this.ps.aktivniHrac;
         //stisknuteTlacitko.getProperties().put("player",Integer.valueOf(this.ps.aktivniHrac));
-        this.ps.herniTlacitka[i][j].put("player",this.ps.aktivniHrac);
+        this.ps.herniTlacitka[i][j].put("player", this.ps.aktivniHrac);
 
         //přepnutí hráče
         if (++this.ps.aktivniHrac >= this.ps.hraci.size()) {
             this.ps.aktivniHrac = 0;
         }
-        stisknuteTlacitko.getProperties().put("player",this.ps.aktivniHrac);
+        stisknuteTlacitko.getProperties().put("player", this.ps.aktivniHrac);
         //aktualizace panelu kdo táhne
         this.labelKdoTahne2.setText(this.ps.hraci.get(this.ps.aktivniHrac).toString());
         System.out.println();
@@ -144,7 +150,7 @@ public class PiskorkyFX extends Application {
             for (j = 0; j < this.ps.rozmerHraciPlochy; j++) {
                 //System.out.format(" %02d ",this.ps.herniPlochaHracu[i][j]);
                 int player = (int) this.ps.herniTlacitka[i][j].get("player");
-                System.out.format("%02d ",  player);
+                System.out.format("%02d ", player);
             }
             System.out.println();
         }
@@ -152,7 +158,7 @@ public class PiskorkyFX extends Application {
     }
 
     private boolean isVerticalWin(int radek, int sloupec, int n) {
-        int aktualniHrac = (int)this.ps.herniTlacitka[radek][sloupec].get("player");
+        int aktualniHrac = (int) this.ps.herniTlacitka[radek][sloupec].get("player");
         if (aktualniHrac < 0) {
             return false;
         }
@@ -160,7 +166,7 @@ public class PiskorkyFX extends Application {
             if (this.ps.rozmerHraciPlochy < i) {
                 return false;
             }
-            if (aktualniHrac != (int)this.ps.herniTlacitka[i][sloupec].get("player")) {
+            if (aktualniHrac != (int) this.ps.herniTlacitka[i][sloupec].get("player")) {
                 return false;
             }
         }
@@ -168,7 +174,7 @@ public class PiskorkyFX extends Application {
     }
 
     private boolean isHorizontalWin(int radek, int sloupec, int n) {
-        int aktualniHrac = (int)this.ps.herniTlacitka[radek][sloupec].get("player");
+        int aktualniHrac = (int) this.ps.herniTlacitka[radek][sloupec].get("player");
         if (aktualniHrac < 0) {
             return false;
         }
@@ -176,7 +182,7 @@ public class PiskorkyFX extends Application {
             if (this.ps.rozmerHraciPlochy < j) {
                 return false;
             }
-            if (aktualniHrac != (int)this.ps.herniTlacitka[radek][j].get("player")) {
+            if (aktualniHrac != (int) this.ps.herniTlacitka[radek][j].get("player")) {
                 return false;
             }
         }
@@ -184,7 +190,7 @@ public class PiskorkyFX extends Application {
     }
 
     private boolean isDiagonalWin(int radek, int sloupec, int n) {
-        int aktualniHrac = (int)this.ps.herniTlacitka[radek][sloupec].get("player");
+        int aktualniHrac = (int) this.ps.herniTlacitka[radek][sloupec].get("player");
         if (aktualniHrac < 0) {
             return false;
         }
@@ -196,7 +202,7 @@ public class PiskorkyFX extends Application {
             if (j > this.ps.rozmerHraciPlochy) {
                 return false;
             }
-            if (aktualniHrac != (int)this.ps.herniTlacitka[i][j].get("player")) {
+            if (aktualniHrac != (int) this.ps.herniTlacitka[i][j].get("player")) {
                 return false;
             }
         }
@@ -204,7 +210,7 @@ public class PiskorkyFX extends Application {
     }
 
     private boolean isReverseDiagonalWin(int radek, int sloupec, int n) {
-        int aktualniHrac = (int)this.ps.herniTlacitka[radek][sloupec].get("player");
+        int aktualniHrac = (int) this.ps.herniTlacitka[radek][sloupec].get("player");
         if (aktualniHrac < 0) {
             return false;
         }
@@ -216,11 +222,31 @@ public class PiskorkyFX extends Application {
             if (j > this.ps.rozmerHraciPlochy) {
                 return false;
             }
-            if (aktualniHrac != (int)this.ps.herniTlacitka[i][j].get("player")) {
+            if (aktualniHrac != (int) this.ps.herniTlacitka[i][j].get("player")) {
                 return false;
             }
         }
         return true;
     }
 
+    private PiskorkyStatus getPiskorkyStatus() {
+        var hostname = "localhost";
+        int port = 8081;
+        PiskorkyStatus ps = null;
+        try (var socket = new Socket(hostname, port)) {
+            try (var writer = socket.getOutputStream()) {
+                writer.write(20);
+            }
+            try (var reader = new ObjectInputStream(socket.getInputStream())) {
+                ps = (PiskorkyStatus) reader.readObject();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ps;
+    }
 }

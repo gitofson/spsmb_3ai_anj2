@@ -3,6 +3,7 @@ package _22y._02m._17d_46.piskorky;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class PiskorkyClientTest {
@@ -10,7 +11,7 @@ public class PiskorkyClientTest {
 
         var hostname = "localhost";
         int port = 8081;
-        int state = 0;
+        int state = 30;
         while(state < 100) {
             try (var socket = new Socket(hostname, port)) {
                 switch (state) {
@@ -41,9 +42,27 @@ public class PiskorkyClientTest {
                             PiskorkyStatus ps = (PiskorkyStatus) reader.readObject();
                             System.out.println(ps.aktivniHrac);
                             System.out.println(ps.hraci.toString());
+                            for (int i = 0; i < ps.rozmerHraciPlochy; i++) {
+                                for (int j = 0; j < ps.rozmerHraciPlochy; j++) {
+                                    //System.out.format(" %02d ",this.ps.herniPlochaHracu[i][j]);
+                                    int player = (int) ps.herniTlacitka[i][j].get("player");
+                                    System.out.format("%02d ",  player);
+                                }
+                                System.out.println();
+                            }
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }
+                        break;
+                    case 30:
+                        try (var writer = socket.getOutputStream()) {
+                            var writerObject = new ObjectOutputStream(socket.getOutputStream());
+                            PiskorkyStatus ps = new PiskorkyStatus(10);
+                            writer.write(30);
+                            state = 30;
+                            writerObject.writeObject(ps);
+                        }
+                        break;
                 }
             }
         }
