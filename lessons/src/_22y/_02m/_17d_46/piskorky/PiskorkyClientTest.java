@@ -17,9 +17,9 @@ public class PiskorkyClientTest {
                 switch (state) {
                     case 0:
                         try (var writer = socket.getOutputStream()) {
-                            writer.write(30);
+                            writer.write(20);
                             //writer.flush();
-                            state = 30;
+                            state = 20;
                         }
                         break;
                     case 10:

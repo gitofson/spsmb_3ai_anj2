@@ -1,7 +1,11 @@
 package _22y._02m._17d_46.piskorky;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,6 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -78,11 +83,11 @@ public class PiskorkyFX extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
+        /*try {
             socket = new Socket(hostname, port);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
         try (var writer = socket.getOutputStream()) {
             var writerObject = new ObjectOutputStream(writer);
             writerObject.writeObject(this.ps);
@@ -114,6 +119,9 @@ public class PiskorkyFX extends Application {
         try {
             GridPane gp = new GridPane();
             this.restorePiskvorkyStatus();
+            Timeline tl = new Timeline(new KeyFrame(Duration.millis(3000), this::animationHandler));
+            tl.setCycleCount(Animation.INDEFINITE);
+            tl.play();
             this.herniTlacitka = new Button[this.ps.rozmerHraciPlochy + 1][this.ps.rozmerHraciPlochy + 1];
             for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
                 for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
@@ -145,6 +153,11 @@ public class PiskorkyFX extends Application {
             ex.printStackTrace();
         }
 
+    }
+
+    private void animationHandler(ActionEvent actionEvent) {
+        this.getPiskorkyStatus();
+        this.obnovaPlochy();
     }
 
     public void tlacitkoStisknuto(ActionEvent actionEvent) {
