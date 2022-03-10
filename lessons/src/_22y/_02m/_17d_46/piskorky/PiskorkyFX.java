@@ -4,12 +4,16 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -34,12 +38,43 @@ public class PiskorkyFX extends Application {
     private HBox panelKdoHraje = new HBox(labelKdoTahne, labelKdoTahne2);
     private String hostname = "localhost";
     private int port = 8081;
+    private Stage stjh;
+    TextField tfjh;
 
     public PiskorkyFX() {
+        Label ljh = new Label("jméno hráče:");
+        this.tfjh = new TextField();
+        HBox hbjh = new HBox(10, ljh, tfjh);
+        Scene sjh = new Scene(hbjh);
+        this.stjh = new Stage();
+        this.stjh.setScene(sjh);
         this.getPiskorkyStatus();
+        this.tfjh.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                //System.out.println(keyEvent.getCharacter());
+                //System.out.println(keyEvent.getCode());
+                if (keyEvent.getCode() == KeyCode.ENTER) {
+                    PiskorkyFX.this.ps.pridatHrace(PiskorkyFX.this.tfjh.getText());
+                    PiskorkyFX.this.stjh.close();
+                }
+            }
+        });
+        stjh.showAndWait();
+
         Timeline tl = new Timeline(new KeyFrame(Duration.millis(3000), this::animationHandler));
         tl.setCycleCount(Animation.INDEFINITE);
         tl.play();
+    }
+
+    public void zobrazeniVyhry(String hrac) {
+        Label vl = new Label("Výhra: " + hrac);
+        HBox hb = new HBox(vl);
+        Scene sv = new Scene(hb);
+        Stage stv = new Stage();
+        stv.setScene(sv);
+        stv.showAndWait();
+        Platform.exit();
     }
 /*private void restorePiskvorkyStatus(){
         Socket socket = null;
@@ -79,12 +114,13 @@ public class PiskorkyFX extends Application {
 
 
         try (var socket = new Socket(hostname, port)) {
-        try (var writer = socket.getOutputStream()) {
-            writer.write(30);
-            //writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }} catch (UnknownHostException e) {
+            try (var writer = socket.getOutputStream()) {
+                writer.write(30);
+                //writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -95,12 +131,13 @@ public class PiskorkyFX extends Application {
             e.printStackTrace();
         }*/
         try (var socket = new Socket(hostname, port)) {
-        try (var writer = socket.getOutputStream()) {
-            var writerObject = new ObjectOutputStream(writer);
-            writerObject.writeObject(this.ps);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }} catch (UnknownHostException e) {
+            try (var writer = socket.getOutputStream()) {
+                var writerObject = new ObjectOutputStream(writer);
+                writerObject.writeObject(this.ps);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -125,8 +162,6 @@ public class PiskorkyFX extends Application {
     public void start(Stage stage) throws Exception {
         try {
             GridPane gp = new GridPane();
-
-
             this.herniTlacitka = new Button[this.ps.rozmerHraciPlochy + 1][this.ps.rozmerHraciPlochy + 1];
             for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
                 for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
@@ -219,6 +254,7 @@ public class PiskorkyFX extends Application {
             for (int sloupec1 = 0; sloupec1 < this.ps.rozmerHraciPlochy; sloupec1++) {
                 if (this.isVerticalWin(radek1, sloupec1, N)) {
                     System.out.println("Win vertical");
+                    this.s
                 }
                 if (this.isHorizontalWin(radek1, sloupec1, N)) {
                     System.out.println("Win horizontal");
@@ -334,11 +370,11 @@ public class PiskorkyFX extends Application {
         }
 
         try (var socket = new Socket(hostname, port)) {
-        try (var reader = new ObjectInputStream(socket.getInputStream())) {
-           this.ps = (PiskorkyStatus) reader.readObject();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            try (var reader = new ObjectInputStream(socket.getInputStream())) {
+                this.ps = (PiskorkyStatus) reader.readObject();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
