@@ -11,7 +11,7 @@ public class PiskorkyClientTest {
 
         var hostname = "localhost";
         int port = 8081;
-        int state = 30;
+        int state = 0;
         while(state < 100) {
             try (var socket = new Socket(hostname, port)) {
                 switch (state) {
@@ -56,13 +56,14 @@ public class PiskorkyClientTest {
                         break;
                     case 30:
                         try (var writer = socket.getOutputStream()) {
-                            var writerObject = new ObjectOutputStream(socket.getOutputStream());
+                            var writerObject = new ObjectOutputStream(writer);
                             PiskorkyStatus ps = new PiskorkyStatus(10);
-                            writer.write(30);
-                            state = 30;
                             writerObject.writeObject(ps);
                         }
+                        state = 101;
                         break;
+                        default:
+                            break;
                 }
             }
         }

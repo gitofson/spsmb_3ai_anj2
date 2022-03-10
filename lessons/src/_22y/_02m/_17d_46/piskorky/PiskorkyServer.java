@@ -49,9 +49,18 @@ public class PiskorkyServer {
                                 try (var is = new ObjectInputStream(socket.getInputStream())) {
                                     ps = (PiskorkyStatus) is.readObject();
                                     System.out.println(request);
+                                    for (int i = 0; i < ps.rozmerHraciPlochy; i++) {
+                                        for (int j = 0; j < ps.rozmerHraciPlochy; j++) {
+                                            //System.out.format(" %02d ",this.ps.herniPlochaHracu[i][j]);
+                                            int player = (int) ps.herniTlacitka[i][j].get("player");
+                                            System.out.format("%02d ",  player);
+                                        }
+                                        System.out.println();
+                                    }
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
+                                request = 0;
                                 break;
                         }
                     }

@@ -1,7 +1,11 @@
 package _22y._02m._17d_46.piskorky;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,9 +14,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -20,12 +26,80 @@ import java.net.UnknownHostException;
 public class PiskorkyFX extends Application {
     private final String VERSION = "1.0";
     private final String TITULEK = "Piškorky" + this.VERSION;
-    private PiskorkyStatus ps = new PiskorkyStatus(12);
+    private PiskorkyStatus ps = null;
     private Button[][] herniTlacitka;
 
     private Label labelKdoTahne = new Label("Táhne: ");
     private Label labelKdoTahne2 = new Label();
     private HBox panelKdoHraje = new HBox(labelKdoTahne, labelKdoTahne2);
+    private String hostname = "localhost";
+    private int port = 8081;
+
+    private void restorePiskvorkyStatus(){
+        Socket socket = null;
+        try {
+            socket = new Socket(hostname, port);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (var writer = socket.getOutputStream()) {
+            writer.write(20);
+            //writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            socket = new Socket(hostname, port);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (var reader = new ObjectInputStream(socket.getInputStream())){
+            this.ps = (PiskorkyStatus) reader.readObject();
+            System.out.println(ps.aktivniHrac);
+            System.out.println(ps.hraci.toString());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void putPiskvorkyStatus() {
+
+        Socket socket = null;
+        try {
+            socket = new Socket(hostname, port);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (var writer = socket.getOutputStream()) {
+            writer.write(30);
+            //writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        /*try {
+            socket = new Socket(hostname, port);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        try (var writer = socket.getOutputStream()) {
+            var writerObject = new ObjectOutputStream(writer);
+            writerObject.writeObject(this.ps);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void obnovaPlochy() {
         for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
@@ -44,6 +118,10 @@ public class PiskorkyFX extends Application {
     public void start(Stage stage) throws Exception {
         try {
             GridPane gp = new GridPane();
+            this.restorePiskvorkyStatus();
+            Timeline tl = new Timeline(new KeyFrame(Duration.millis(3000), this::animationHandler));
+            tl.setCycleCount(Animation.INDEFINITE);
+            tl.play();
             this.herniTlacitka = new Button[this.ps.rozmerHraciPlochy + 1][this.ps.rozmerHraciPlochy + 1];
             for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
                 for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
@@ -75,6 +153,11 @@ public class PiskorkyFX extends Application {
             ex.printStackTrace();
         }
 
+    }
+
+    private void animationHandler(ActionEvent actionEvent) {
+        this.getPiskorkyStatus();
+        this.obnovaPlochy();
     }
 
     public void tlacitkoStisknuto(ActionEvent actionEvent) {
@@ -155,6 +238,7 @@ public class PiskorkyFX extends Application {
             System.out.println();
         }
         this.obnovaPlochy();
+        this.putPiskvorkyStatus();
     }
 
     private boolean isVerticalWin(int radek, int sloupec, int n) {
