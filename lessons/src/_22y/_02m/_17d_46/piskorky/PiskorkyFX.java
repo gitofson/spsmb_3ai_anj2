@@ -35,7 +35,13 @@ public class PiskorkyFX extends Application {
     private String hostname = "localhost";
     private int port = 8081;
 
-    private void restorePiskvorkyStatus(){
+    public PiskorkyFX() {
+        this.getPiskorkyStatus();
+        Timeline tl = new Timeline(new KeyFrame(Duration.millis(3000), this::animationHandler));
+        tl.setCycleCount(Animation.INDEFINITE);
+        tl.play();
+    }
+/*private void restorePiskvorkyStatus(){
         Socket socket = null;
         try {
             socket = new Socket(hostname, port);
@@ -67,19 +73,19 @@ public class PiskorkyFX extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     private void putPiskvorkyStatus() {
 
-        Socket socket = null;
-        try {
-            socket = new Socket(hostname, port);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        try (var socket = new Socket(hostname, port)) {
         try (var writer = socket.getOutputStream()) {
             writer.write(30);
             //writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }} catch (UnknownHostException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -88,17 +94,18 @@ public class PiskorkyFX extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
+        try (var socket = new Socket(hostname, port)) {
         try (var writer = socket.getOutputStream()) {
             var writerObject = new ObjectOutputStream(writer);
             writerObject.writeObject(this.ps);
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        try {
-            socket.close();
+        }} catch (UnknownHostException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public void obnovaPlochy() {
@@ -118,10 +125,8 @@ public class PiskorkyFX extends Application {
     public void start(Stage stage) throws Exception {
         try {
             GridPane gp = new GridPane();
-            this.restorePiskvorkyStatus();
-            Timeline tl = new Timeline(new KeyFrame(Duration.millis(3000), this::animationHandler));
-            tl.setCycleCount(Animation.INDEFINITE);
-            tl.play();
+
+
             this.herniTlacitka = new Button[this.ps.rozmerHraciPlochy + 1][this.ps.rozmerHraciPlochy + 1];
             for (int i = 0; i < this.ps.rozmerHraciPlochy + 1; i++) {
                 for (int j = 0; j < this.ps.rozmerHraciPlochy + 1; j++) {
@@ -316,16 +321,24 @@ public class PiskorkyFX extends Application {
     private PiskorkyStatus getPiskorkyStatus() {
         var hostname = "localhost";
         int port = 8081;
-        PiskorkyStatus ps = null;
+
         try (var socket = new Socket(hostname, port)) {
             try (var writer = socket.getOutputStream()) {
                 writer.write(20);
             }
-            try (var reader = new ObjectInputStream(socket.getInputStream())) {
-                ps = (PiskorkyStatus) reader.readObject();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (var socket = new Socket(hostname, port)) {
+        try (var reader = new ObjectInputStream(socket.getInputStream())) {
+           this.ps = (PiskorkyStatus) reader.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
