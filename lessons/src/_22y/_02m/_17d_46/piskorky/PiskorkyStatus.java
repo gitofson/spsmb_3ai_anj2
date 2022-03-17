@@ -12,6 +12,7 @@ public class PiskorkyStatus implements Serializable {
     int rozmerHraciPlochy;
     int nTah = 1;
     //int[][] herniPlochaHracu;
+    String vyherce = null;
     ArrayList<String> hraci;
     Map[][] herniTlacitka;
     //aktivni Hráč se zde automaticky inicializuje na 0 (LOJZA), netřeba inicializovat
