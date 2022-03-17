@@ -254,7 +254,7 @@ public class PiskorkyFX extends Application {
             for (int sloupec1 = 0; sloupec1 < this.ps.rozmerHraciPlochy; sloupec1++) {
                 if (this.isVerticalWin(radek1, sloupec1, N)) {
                     System.out.println("Win vertical");
-                    this.s
+                    //this.s
                 }
                 if (this.isHorizontalWin(radek1, sloupec1, N)) {
                     System.out.println("Win horizontal");
