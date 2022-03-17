@@ -5,5 +5,6 @@ package _22y._03m._17d_48.vlakna;
 // Konstantu pi spočítáte jako pi = 4*No/N, kde N je celkový počet hodů a No je pošet hodů do vepsaného kruhu.
 // Můžete se inspirovat z resources/examples/c
 // Použijte co největší počet hodů a vlákna pro urychlení výpočtu.
+// Změřte dobu běhu pro verzi s vlákny a verzi bez vláken.
 public class Ukol {
 }
