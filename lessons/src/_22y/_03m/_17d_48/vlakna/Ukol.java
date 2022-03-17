@@ -4,5 +4,23 @@ package _22y._03m._17d_48.vlakna;
 // čísly typu double od -1 do 1. Pokud je bod uvnitř vepsané kružnice, platí x^2+Y^2<=1.
 // Konstantu pi spočítáte jako pi = 4*No/N, kde N je celkový počet hodů a No je pošet hodů do vepsaného kruhu.
 // Můžete se inspirovat z resources/examples/c
+//
+//  xM=double -1;
+//  yM=double 1;
+//  long mx = 100000;
+//  long 0 = 0;
+//
+//  for(int i = 0; i < max + 1; i++){
+//    x=math.random<xM;yM)>;
+//    y=math.random<xM;yM>;
+//
+//    if(x*x+y*y<=1){
+//      n0= n0 + 1
+//    };
+//  }
+
+//  
+
 public class Ukol {
 }
+
