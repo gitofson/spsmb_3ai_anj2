@@ -9,7 +9,7 @@ public class GenDoMilionu {
         int k = 10;
         FileWriter write = new FileWriter("data.txt");
         PrintWriter print = new PrintWriter(write);
-        for (int j = 0; j < 1000000; j++) {
+        for (int j = 0; j < 10000000; j++) {
             print.println(j);
             //System.out.print(j+1 + " ");
         }
