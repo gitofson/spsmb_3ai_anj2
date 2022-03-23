@@ -7,4 +7,29 @@ package _22y._03m._17d_48.vlakna;
 // Použijte co největší počet hodů a vlákna pro urychlení výpočtu.
 // Změřte dobu běhu pro verzi s vlákny a verzi bez vláken.
 public class Ukol {
+            double randomWithRange(int min, int max){
+                double range = (max - min);
+                return (Math.random() * range) + min;
+            }
+
+            public static void main( String args[] ) {
+                Ukol du = new Ukol();
+                double n0 = 0;
+                double n = 100000;
+
+                for(int i = 0; i < n; i++){
+
+                    double x= du.randomWithRange(-1,1);
+                    double y= du.randomWithRange(-1,1);
+                    if(x*x+y*y<=1){
+                        n0= n0 + 1;
+                    }
+
+                }
+                double pi = 4*n0/n;
+                System.out.println(pi);
+
+
+            }
+
 }
