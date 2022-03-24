@@ -31,6 +31,6 @@ package _22y._03m._24d_50.vlakna;
 // - Běžící vlákno pomocí metody yeld() dobrovolně předá řízení některému
 //   běhuschopnému vláknu se stejnou prioritou.
 // - Vlákno s nižší prioritou může záískat řízení jen tehdy, když vlákna
-//   s vyšší prioritou přejdou do neběhuschopnéhostavu.
+//   s vyšší prioritou přejdou do neběhuschopného stavu.
 public class AStavyVlakna {
 }
