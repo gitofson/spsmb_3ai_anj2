@@ -10,7 +10,7 @@ public class BVlakno5  implements Runnable {
 
     public void start() {
         this.zobrazVl = new Thread(this);
-        this.start();
+        this.zobrazVl.start();
     }
     @Override
     public void run() {
