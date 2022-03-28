@@ -22,5 +22,21 @@ package _22y._03m._28d_51.vlakna_producent_konzument;
 // notifyAll()  - probudí všechna vlákna, která byla v tomto objektu pozastavena
 //                metodou wait()
 // notify()     - probudí pouze jedno vlákno, přičemž není určeno které.
+class Producent extends Thread {
+    private Cteni c;
+    Producent(Cteni c) {
+        this.c = c;
+    }
+    public void run() {
+        while(interrupted() == false) {
+            c.nacti();
+        }
+        System.out.println(" " + c.jmenoSouboru + " - konec cteni ");
+    }
+}
 public class SynchronizaceCasovePosloupnostiVlaken {
+    public static void main(String[] args) {
+        Cteni ct1 = new Cteni("data.txt");
+        //Producent vlPr1 = new Producent(ct1);
+    }
 }
