@@ -22,6 +22,8 @@ package _22y._04m.javadoc;
 // {@link text} - text je odkazem na jinou část programu. Tímto odkazem může být buď jméno
 //                třídy, nebo jméno třídy následované znakem # na názvem atributu nebo názvem
 //                metody následovaným seznamem typů parametrů v závorkách.
+// Do "Other command line arguments" přidat -encoding utf8 -docencoding utf8 -charset utf8
+
 
 /**
  * Třída {@code AUvod} slouží pouze jako ukázka použití
