@@ -79,5 +79,24 @@ package _22y._04m.lambda;
 // LongPredicate          boolean test(long   value)
 // BiPredicate<T, U>      boolean test(T t ,U u)
 
+// Důležitá funkční rozhraní:
+// Balíček java.awt.event:
+// ActionListener               void actionPerformed(ActionEvent e)
+
+// Balíček java.io:
+// Closeable                    void close()
+// FileFilter                   boolean accept(File pathname)
+// FilenameFilter               boolean accept(File dir, String name)
+// Flushable                    void flush()
+
+// Balíček java.lang
+// AutoCloseable                void close()
+// Comparable<T>                int compareTo(T o)
+// Iterable<T>                  Iterator<T> iterator()
+// Runnable                     void run()
+
+// Balíček java.util
+// Comparator<T>                boolean equals(T o)
+// Observer                     void update(Observable o, Object arg)
 public class AUvod {
 }
