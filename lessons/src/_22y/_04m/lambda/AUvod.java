@@ -98,5 +98,30 @@ package _22y._04m.lambda;
 // Balíček java.util
 // Comparator<T>                boolean equals(T o)
 // Observer                     void update(Observable o, Object arg)
+
+import java.util.function.IntBinaryOperator;
+
+// Překladač definuje  lambda výraz jako instanci funkčního rozhraní,
+// jehož metoda má odpovídající parametry a vrací hodnotu odpovídajícího typu. Obecný zápis
+// -------------------------------------------
+// ( parametry ) -> { příkazy }
+// -------------------------------------------
+// Ve většině případů, kdy si umí překladač domyslet typ parametru se typy uvádět nemusí, pokud je
+// navíc parametr než jede, první závorky psát nemusíme:
+// parametr -> { příkazy }
+// Tvoří-li tělo pouze jeden příkaz, lze vynechat složené závorky:
+// ( parametry ) -> příkaz
+// Nejjednodušší podoba tedy je:
+// parametr -> výraz
 public class AUvod {
+    public static void main(String[] args) {
+        IntBinaryOperator ibo;
+        int result;
+        ibo = (a, b) -> a + b;
+        result = ibo.applyAsInt(5,6);
+        System.out.println(result);
+        ibo = (a, b) -> a - b;
+        result = ibo.applyAsInt(5,6);
+        System.out.println(result);
+    }
 }
