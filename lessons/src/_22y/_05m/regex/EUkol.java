@@ -2,6 +2,12 @@ package _22y._05m.regex;
 
 // Napište regulární výraz, který vybere libovolnou adresu formátu IPv6.
 // Např. 2345:0425:2CA1:0000:0000:0567:5673:23b5
+// Rozšiřte i na následující platné formáty:
+// 2001:0db8:0000:0000:0000::1428:57ab
+// 2001:0db8:0:0:0:0:1428:57ab
+// 2001:0db8:0:0::1428:57ab
+// 2001:0db8::1428:57ab
+// 2001:db8::1428:57ab
 
 // Napište RV, který z textu vybere
 // a)   tel či telefon.
@@ -9,6 +15,7 @@ package _22y._05m.regex;
 // c)   čísla 0 až 99
 // d) 	letopočty 1900-2099
 // e)   řetězec, který končí znakem 0 (nula), kterému předchází minimálně jedna číslice
+// f)   česká telefonní čísla (začínají +420)
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
