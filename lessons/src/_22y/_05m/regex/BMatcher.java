@@ -45,6 +45,11 @@ import java.util.regex.Pattern;
 // X|Y	            - X neboY
 // (X)              - párování logických spojek slouží také k zapamatování při nahrazování pomocí \1 až \\n/p>
 
+// příklady:
+// .*1
+// \bpro\b
+// \b(a|i|o|u)\b
+// \d+\.\d+\.\d+\.\d+
 public class BMatcher {
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("w3schools", Pattern.CASE_INSENSITIVE);
