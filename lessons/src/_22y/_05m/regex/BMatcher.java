@@ -50,6 +50,7 @@ import java.util.regex.Pattern;
 
 // seskupování:
 // (X)                - skupina, slouží k zapamatování při nahrazování pomocí \1 až \\n/p>
+//                      reference při nahrazování pomocí $n
 // (?'jmeno_skupiny') - pojmenování skupiny. V Javě potřeba použít (?<jmeno_skupiny>)
 //                      reference pak pomocí \k<name>, resp. ${name}
 // (?:X)              - seskupí, ale nezapamatuje
