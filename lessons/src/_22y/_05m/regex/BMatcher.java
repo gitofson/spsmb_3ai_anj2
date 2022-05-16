@@ -33,12 +33,18 @@ import java.util.regex.Pattern;
 // \\uxxxx           - nalezení unicode znaku, specifikovaného pomocí hexadecimálního čísla
 
 // kvantifikátory - určují počet opakování
-// n+               - jedno nebo více n
-// n*               - nula nebo více n
+// n+               - jedno nebo více n (greedy)
+// n+?               - jedno nebo více n (non-greedy)
+// n*               - nula nebo více n  (greedy)
+// n*?               - nula nebo více n  (non-greedy)
 // n?               - nula nebo jedno n
 // n{x}             - přesně x n za sebou
 // n{x,y}           - x až y n za sebou
 // n{x,}            - x a více n za sebou
+
+// greedy vs non-greedy
+// greedy           - standartní chování (např.: .*), označí nejdelší možný řetězec
+// non greedy           - po přidání otazníku (např.: .*?), označí nejkratší možný řetězec
 
 // logické spojky
 // XY	            - X ihned za Y
