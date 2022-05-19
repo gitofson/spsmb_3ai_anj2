@@ -1,7 +1,8 @@
 package _22y._05m.graph_traverse;
 
 
-import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Graph {
     //hlavička, začátek seznamu
@@ -14,17 +15,17 @@ public class Graph {
     public Node getHead() {
         return head;
     }
-
+    Set<Node> visited = new TreeSet<>();
     void printGraphDFS(Node n)
     {
-        for (Node currentN:n.next) {
-            System.out.print(currentN.data + " ");
-            if (n.next.isEmpty()){
-                System.out.println();
-                break;
-            }else{
+        visited.add(n);
+        for (Node currentN:n.nextNodeList) {
+            if(!visited.contains(currentN)) {
+                System.out.print(currentN.data + " ");
                 printGraphDFS(currentN);
             }
+            System.out.println();
         }
     }
+
 }
