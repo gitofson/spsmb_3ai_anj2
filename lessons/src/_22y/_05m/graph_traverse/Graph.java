@@ -1,8 +1,7 @@
 package _22y._05m.graph_traverse;
 
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Graph {
     //hlavička, začátek seznamu
@@ -28,4 +27,24 @@ public class Graph {
         }
     }
 
+    public List<Node> getNodeListDFS() {
+        LinkedList<Node> out = new LinkedList<>();
+        Stack<Node> stack = new Stack<>();
+        visited.clear();
+
+        stack.add(this.head);
+        while (!stack.isEmpty()) {
+            Node tmp= stack.pop();
+            if (!visited.contains(tmp)) {
+                visited.add(tmp);
+                out.add(tmp);
+                for (Node currentN : tmp.nextNodeList) {
+                    if (!visited.contains(currentN)) {
+                        stack.push(currentN);
+                    }
+                }
+            }
+        }
+        return out;
+    }
 }
