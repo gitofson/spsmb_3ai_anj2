@@ -28,6 +28,7 @@ package _22y._05m.maven;
 //  </plugins>
 //</build>
 
-
+// Pro import JavaFX použijte následující návod:
+//https://openjfx.io/openjfx-docs/#maven
 public class Uvod {
 }
