@@ -1,6 +1,6 @@
 package _22y._05m.maven;
 // Apache Maven - nástroj pro správu projektu, nástupce Apache Ant.
-// Nutno zmínit, že jeden z nejstarších a dfochovalých nástrojů
+// Nutno zmínit, že jeden z nejstarších a dochovalých nástrojů
 // pro správu projektu je GNU Make.
 
 // Nový projekt -> Maven
@@ -28,6 +28,26 @@ package _22y._05m.maven;
 //  </plugins>
 //</build>
 
+// Ještě lépe pro JavaFX:
+/*
+<plugin>
+  <artifactId>maven-shade-plugin</artifactId>
+  <version>3.3.0</version>
+  <executions>
+    <execution>
+      <phase>package</phase>
+      <goals><goal>shade</goal></goals>
+      <configuration>
+        <transformers>
+          <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+          <mainClass>SuperMain</mainClass>
+          </transformer>
+        </transformers>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+*/
 // Pro import JavaFX použijte následující návod:
 //https://openjfx.io/openjfx-docs/#maven
 public class Uvod {
