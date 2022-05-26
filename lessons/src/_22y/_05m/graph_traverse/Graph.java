@@ -27,6 +27,10 @@ public class Graph {
         }
     }
 
+    /**
+     * algoritmus hledání do hloubky, používá abstraktní datový typ zásobník
+     * @return
+     */
     public List<Node> getNodeListDFS() {
         LinkedList<Node> out = new LinkedList<>();
         Stack<Node> stack = new Stack<>();
@@ -41,6 +45,32 @@ public class Graph {
                 for (Node currentN : tmp.nextNodeList) {
                     if (!visited.contains(currentN)) {
                         stack.push(currentN);
+                    }
+                }
+            }
+        }
+        return out;
+    }
+
+    /**
+     * algoritmus hledání do šířky, používá abstraktní datový typ fronta
+     * @return
+     */
+    public List<Node> getNodeListBFS() {
+        LinkedList<Node> out = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<Node>();
+
+        visited.clear();
+
+        queue.add(this.head);
+        while (!queue.isEmpty()) {
+            Node tmp= queue.poll();
+            if (!visited.contains(tmp)) {
+                visited.add(tmp);
+                out.add(tmp);
+                for (Node currentN : tmp.nextNodeList) {
+                    if (!visited.contains(currentN)) {
+                        queue.add(currentN);
                     }
                 }
             }
