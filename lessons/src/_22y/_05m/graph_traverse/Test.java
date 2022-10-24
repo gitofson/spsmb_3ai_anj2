@@ -31,6 +31,6 @@ public class Test {
         //currN8.nextNodeList.add(currN3);
 
         //graph.printGraphDFS(graph.getHead());
-        System.out.print(graph.getNodeListDFS());
+        System.out.print(graph.getNodeListBFS());
     }
 }
